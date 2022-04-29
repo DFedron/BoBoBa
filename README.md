@@ -1,7 +1,7 @@
 # BoBoBa
 <img align="right" width="159px" src="https://raw.githubusercontent.com/dan-trang/MyFiles/main/boboba_logo.jpg">
 **BoBoBa** is a web application written in Go (Golang) and [front-end languages here]. If you love boba tea and want to find the best stuff near you, use **BoBoBa** right [NOW](http://localhost:8080/)!
-**BOBOBA**
+__BOBOBA__
 
 ## Cloning this Repo
 
