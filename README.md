@@ -1,6 +1,8 @@
 # BoBoBa
-<img align="right" width="159px" src="https://raw.githubusercontent.com/dan-trang/MyFiles/main/boboba_logo.jpg">
 BoBoBa is a web application written in Go (Golang) and [front-end languages here]. If you love boba tea and want to find the best stuff near you, use BoBoBa right [NOW](http://localhost:8080)!
+
+<img align="right" width="159px" src="https://raw.githubusercontent.com/dan-trang/MyFiles/main/boboba_logo.jpg">
+
 
 ## Cloning this Repo
 
@@ -36,8 +38,6 @@ Now, you can run the executable file by simply doing `./server`. The default loc
 Once there, open up the developer console to view requests and responses. For WINDOWS `Ctrl Shift J` or MAC `Ctrl Option J`. Select the <u>Network</u> table and see your requests by <u>Name</u> and <u>Status</u>.
 
 If you want more detail on a specific event, click its <u>Name</u> to see a more detailed view.
-
-**TESTING BOLD MARKDOWN**
 
 
 
