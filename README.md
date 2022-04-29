@@ -11,10 +11,10 @@ To get developing, you'll want to clone this repository first. You'll also want 
 2. Now run `git clone https://github.com/dan-trang/BoBoBa.git`.
 
 3. Next, make sure that you're linked to this remote repo by running these two commands:
-```sh
+```
 git remote add origin https://github.com/dan-trang/BoBoBa.git
 ```
-```sh
+```
 git remote set-url origin https://github.com/dan-trang/BoBoBa.git
 ```
 4. Add a new working branch in your local and change to it: `git checkout -b <your-branch-name>`
@@ -25,7 +25,7 @@ Now, you should be all set up to start developing!
 
 To get the server up and running, first you'll need to `cd` into the "backend" folder. Then use:
 
-```sh
+```
 > go build -o server.exe
 ```
 *Please delete .exe before pushing to remote repo!*
