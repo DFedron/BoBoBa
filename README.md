@@ -1,5 +1,5 @@
 # BoBoBa
-<img align="right" width="159px" src="https://raw.githubusercontent.com/dan-trang/MyFiles/main/boboba_logo.jpg?token=GHSAT0AAAAAABSYJ3MF5ZMIYRG6CHMKT7EWYTLMC2A">
+<img align="right" width="159px" src="https://raw.githubusercontent.com/dan-trang/MyFiles/main/boboba_logo.jpg">
 **BoBoBa** is a web application written in Go (Golang) and [front-end languages here]. If you love boba tea and want to find the best stuff near you, use **BoBoBa** right [NOW](http://localhost:8080/)!
 
 ## Cloning this Repo
@@ -25,7 +25,7 @@ Now, you should be all set up to start developing!
 
 To get the server up and running, first you'll need to `cd` into the "backend" folder. Then use:
 
-```sh
+```go
 > go build -o server.exe
 ```
 *Please delete .exe before pushing to remote repo!*
