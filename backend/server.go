@@ -23,6 +23,7 @@ func main() {
 	http.HandleFunc("/", MainHandler)
 	http.HandleFunc("/about", AboutHandler)
 
+	//start server, set port to 8080
 	fmt.Println("Server Listening on PORT 8080")
-	log.Fatal(http.ListenAndServe(":8080", nil)) //start web server, set port to 8080
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
