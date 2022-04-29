@@ -1,10 +1,6 @@
 # BoBoBa
 <img align="right" width="159px" src="https://raw.githubusercontent.com/dan-trang/MyFiles/main/boboba_logo.jpg">
-<<<<<<< HEAD
-**BoBoBa** is a web application written in Go (Golang) and [front-end languages here]. If you love boba tea and want to find the best stuff near you, use **BoBoBa** right [NOW](http://localhost:8080)!
-=======
-**BoBoBa** is a web application written in Go (Golang) and [front-end languages here]. If you love boba tea and want to find the best stuff near you, use ** BoBoBa ** right [NOW](http://localhost:8080/)!
->>>>>>> c5d7375172b036adee1217e3ea3da7225f02a05c
+**BoBoBa** is a web application written in Go (Golang) and [front-end languages here]. If you love boba tea and want to find the best stuff near you, use ** BoBoBa ** right [NOW](http://localhost:8080)!
 
 ## Cloning this Repo
 
