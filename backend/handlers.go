@@ -1,38 +1,61 @@
 package main
 
 import (
-	"html/template"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
 )
 
-//Create a struct that holds information to be displayed in our HTML file
+//Data to be passed into tpl.ExecuteTemplate()
 type Welcome struct {
 	Name string
 	Time string
 }
 
-func AboutHandler(w http.ResponseWriter, r *http.Request) {
-	welcome := Welcome{"Customer", time.Now().Format(time.Stamp)}
-	templates := template.Must(template.ParseFiles("../templates/about.html"))
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	//logs
+	fmt.Println("Index handler is running...")
 
-	if err := templates.ExecuteTemplate(w, "about.html", welcome); err != nil {
+	//initialize welcome struct
+	welcome := Welcome{"Customer", time.Now().Format(time.Stamp)}
+
+	//Takes the name from the URL query (e.g ?name=Satomi), will set welcome.Name = Satomi
+	if name := r.FormValue("name"); name != "" {
+		welcome.Name = name
+	}
+
+	if err := tpl.ExecuteTemplate(w, "index.html", welcome); err != nil {
 		log.Print(err.Error())                                     //display error on console
 		http.Error(w, err.Error(), http.StatusInternalServerError) //display error on browser
 	}
 }
 
-func MainHandler(w http.ResponseWriter, r *http.Request) {
-	welcome := Welcome{"Customer", time.Now().Format(time.Stamp)}
-	templates := template.Must(template.ParseFiles("../templates/index.html"))
+func AboutHandler(w http.ResponseWriter, r *http.Request) {
+	//logs
+	fmt.Println("About handler is running...")
 
-	//Takes the name from the URL query e.g ?name=Satomi, will set welcome.Name = Satomi
-	if name := r.FormValue("name"); name != "" {
-		welcome.Name = name
+	if err := tpl.ExecuteTemplate(w, "about.html", nil); err != nil {
+		log.Print(err.Error())                                     //display error on console
+		http.Error(w, err.Error(), http.StatusInternalServerError) //display error on browser
 	}
+}
 
-	if err := templates.ExecuteTemplate(w, "index.html", welcome); err != nil {
+func ContactHandler(w http.ResponseWriter, r *http.Request) {
+	//logs
+	fmt.Println("Contact handler is running...")
+
+	if err := tpl.ExecuteTemplate(w, "contact.html", nil); err != nil {
+		log.Print(err.Error())                                     //display error on console
+		http.Error(w, err.Error(), http.StatusInternalServerError) //display error on browser
+	}
+}
+
+func LoginHandler(w http.ResponseWriter, r *http.Request) {
+	//logs
+	fmt.Println("Login handler is running...")
+
+	if err := tpl.ExecuteTemplate(w, "login.html", nil); err != nil {
 		log.Print(err.Error())                                     //display error on console
 		http.Error(w, err.Error(), http.StatusInternalServerError) //display error on browser
 	}

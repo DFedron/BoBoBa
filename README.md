@@ -21,7 +21,8 @@ git remote set-url origin https://github.com/dan-trang/BoBoBa.git
 ```
 4. Add a new working branch in your local and change to it: `git checkout -b <your-branch-name>`
 
-Now, you should be all set up to start developing!
+Now, you should be all set up to start developing! 
+**TIP:** *When developing via the browser, use Incognito mode to avoid those nasty cookies!*
 
 ## Running the Server
 
