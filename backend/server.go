@@ -1,11 +1,5 @@
 package main
 
-/*
-1. “net/http” to access the core go http functionality
-2. “fmt” for formatting our text
-3. “html/template” a library that allows us to interact with our html file.
-4. "time" - a library for working with date and time.
-*/
 import (
 	"fmt"
 	"html/template"
