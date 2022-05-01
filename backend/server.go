@@ -20,10 +20,9 @@ func main() {
 	//Parse any matching *.html files
 	tpl, _ = tpl.ParseGlob("../templates/*.html")
 
-	//handling HTML /static/
-	http.Handle("/static/",
-		http.StripPrefix("/static/",
-			http.FileServer(http.Dir("../static"))))
+	//handling HTML CSS from /static/ directory
+	fs := http.FileServer(http.Dir("../static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	//PATH handling
 	http.HandleFunc("/", IndexHandler)
