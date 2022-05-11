@@ -26,15 +26,18 @@ Now, you should be all set up to start developing!
 
 ## Running the Server
 
-To get the server up and running, first you'll need to `cd` into the "backend" folder. Then use:
+We'll be using Docker Containers. The frontend will be in React app.
 
+To get the backend server up and running, first you'll need to `cd` into the "backend" folder. 
+Then run the following:
 
-```go
-> go build -o server.exe
 ```
-*Please delete .exe before pushing to remote repo!*
+> docker build -t boboba .
 
-Now, you can run the executable file by simply doing `./server`. The default localhost port is set to `localhost:8080` so go ahead and head over there right [here](http://localhost:8080). 
+> docker run -p 8080:8080 boboba
+```
+
+The default localhost port is set to `localhost:8080` so go ahead and head over there right [here](http://localhost:8080). 
 
 Once there, open up the developer console to view requests and responses. For WINDOWS `Ctrl Shift J` or MAC `Ctrl Option J`. Select the <u>Network</u> table and see your requests by <u>Name</u> and <u>Status</u>.
 
