@@ -5,10 +5,8 @@ import menu from '../images/menu.png';
 
 
 const NavbarContainer = styled.div`
-    position: absolute;
     width: 100%;
     height: 125px;
-    left: 0px;
     top: 0px;
     display: flex;
     background: rgba(253, 150, 143, 0.2);

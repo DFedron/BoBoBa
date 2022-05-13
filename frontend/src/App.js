@@ -1,24 +1,23 @@
 import Navbar from'./component/Navbar';
 import Hellopage from'./component/Hellopage';
-import RecentImage from './component/RecentImage';
-import Trending from './component/Trending';
-import ButtomNavBar from './component/ButtomNavBar';
+
 import styled from 'styled-components';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Section = styled.div`
-  position: relative;
+  position: absolute;
   display: block;
-`;
+  top: 0px;
+  left: 0px;
+  width: 100%
+  `;
 
 function App() {
   return (
     <Section>
       <Navbar />
       <Hellopage />
-      <RecentImage />
-      <Trending />
-      <ButtomNavBar />
+
     </Section>
   );
 }

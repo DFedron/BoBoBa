@@ -1,7 +1,9 @@
 import React  from 'react';
 import styled from 'styled-components';
 import background from '../images/blur-restaurant-interior.jpeg';
-
+import RecentImage from './RecentImage';
+import Trending from './Trending';
+import ButtomNavBar from './ButtomNavBar';
 
 
 const Section = styled.section`
@@ -11,10 +13,10 @@ const Section = styled.section`
     background attachment fixed;
     background-size:cover;
     grid-template-rows: repeat(5, 180px);
-    position: absolute;
+    // position: absolute;
     width: 100%;
-    left: 0px;
-    top: 125px;
+    // left: 0px;
+    // top: 125px;
 
 
 `;
@@ -31,8 +33,6 @@ const ContentOne = styled.div`
     font-size: 96px;
     line-height: 134px;
 
-
-    
     letter-spacing: 0.1em;
     color: #FD968F;
 `;
@@ -84,10 +84,10 @@ const Button = styled.div`
 
 
 
-const Hellopage=()=>
+const Hellopage = () =>
 {
     return(
-
+        <div style = {{display: "block"}}>
             <Section>
                 <ContentOne></ContentOne>
                 <ContentOne>
@@ -98,9 +98,16 @@ const Hellopage=()=>
                 </ContentTwo>
                 <Button>
                     Gimme Boba!
-                </Button>
+                </Button>                
+
             </Section>
-        
+
+            <RecentImage/>
+            <Trending  />
+            <ButtomNavBar /> 
+        </div>
+
+
          )
 };
 

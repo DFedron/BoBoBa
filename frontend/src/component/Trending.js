@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components';
 const Section = styled.div`
     
-  position: absolute;
+  // position: absolute;
   width: 100%;
   height: 607px;
-  left: 3px;
-  top: 1686px;
+  // left: 3px;
+  // top: 1686px;
   background: rgba(253, 150, 143, 0.2);
 `;
 
@@ -15,8 +15,8 @@ const Title = styled.div`
   width: 344px;
   height: 156px;
 
-  top: 228px;
-
+  padding-right: 40px;
+  padding-top: 228px;
   margin-left: auto;
   font-family: 'Inria Serif';
   font-style: italic;
@@ -41,4 +41,4 @@ function Trending() {
   )
 }
 
-export default Trending
+export default Trending;
