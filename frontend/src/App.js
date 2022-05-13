@@ -1,5 +1,5 @@
-import Navbar from'./compone/Navbar';
-import Hellopage from'./compone/Hellopage';
+import Navbar from'./component/Navbar';
+import Hellopage from'./component/Hellopage';
 function App() {
   return (
     <div>
