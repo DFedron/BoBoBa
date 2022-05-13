@@ -7,7 +7,6 @@ import menu from '../images/menu.png';
 const NavbarContainer = styled.div`
     width: 100%;
     height: 125px;
-    top: 0px;
     display: flex;
     background: rgba(253, 150, 143, 0.2);
 `;
