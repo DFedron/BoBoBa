@@ -174,75 +174,81 @@ const Navbar=()=>
     }
     return(
        
-            
-         <>   
+  
          <NavbarContainer>
             
-                <div className='navbar'>
-                    <Link to='#' className='menu-bars'>
-                        <Menu onClick={showSidebar} />
-                    </Link>
-                </div>
+            <div className='navbar'>
+                <Link to='#' className='menu-bars'>
+                    <Menu onClick={showSidebar} />
+                </Link>
+            </div>
 
-                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                    <ul className='nav-menu-items' onClick={showSidebar}>
-                        
-                        {SidebarDataPart1.map((item, index) => {
-                        return (
-                            <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                            </Link>
-                            </li>
-                        );
-                        })}
+            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                <ul className='nav-menu-items' onClick={showSidebar}>
+                    
+                    {SidebarDataPart1.map((item, index) => {
+                    return (
+                        <li key={index} className={item.cName}>
+                        <Link to={item.path}>
+                            {item.icon}
+                            <span>{item.title}</span>
+                        </Link>
+                        </li>
+                    );
+                    })}
 
-                        <Break />
-                        {SidebarDataPart2.map((item, index) => {
-                        return (
-                            <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                            </Link>
-                            </li>
-                        );
-                        })}
-                        <Break />
-                        {SidebarDataPart3.map((item, index) => {
-                        return (
-                            <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                            </Link>
-                            </li>
-                        );
-                        })}
-                        <Break />
-                        {SidebarDataPart4.map((item, index) => {
-                        return (
-                            <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                            </Link>
-                            </li>
-                        );
-                        })}
-                    </ul>
-                </nav>    
-         
+                    <Break />
+                    {SidebarDataPart2.map((item, index) => {
+                    return (
+                        <li key={index} className={item.cName}>
+                        <Link to={item.path}>
+                            {item.icon}
+                            <span>{item.title}</span>
+                        </Link>
+                        </li>
+                    );
+                    })}
+
+                    <Break />
+                    {SidebarDataPart3.map((item, index) => {
+                    return (
+                        <li key={index} className={item.cName}>
+                        <Link to={item.path}>
+                            {item.icon}
+                            <span>{item.title}</span>
+                        </Link>
+                        </li>
+                    );
+                    })}
+                    
+                    <Break />
+                    {SidebarDataPart4.map((item, index) => {
+                    return (
+                        <li key={index} className={item.cName}>
+                        <Link to={item.path}>
+                            {item.icon}
+                            <span>{item.title}</span>
+                        </Link>
+                        </li>
+                    );
+                    })}
+                </ul>
+            </nav>    
+        
             <Logo></Logo>
             <Title>Boboba</Title>
             <ButtonContainer>
-                <ButtonSignIn>Sign In</ButtonSignIn> 
+                <Link to='/SignUp' style={{ textDecoration: 'none' }}>
+                    <ButtonSignIn>
+                        Sign In
+                    </ButtonSignIn> 
+                </Link>    
+                
                 <ButtonMyAccount>MyAccount</ButtonMyAccount>
             </ButtonContainer>
         </NavbarContainer>
-        </>
-         )
+     
+    )
 };
 
 export default Navbar;

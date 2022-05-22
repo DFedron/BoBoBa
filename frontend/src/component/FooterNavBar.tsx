@@ -151,41 +151,38 @@ const Trending = styled.div`
 
 function ButtomNavBar() {
   return (
-      
         <Section>
-           
-    {/* <Container> */}
 
             <Wrapper>
             <Row>
               <Column>
+                <Logo></Logo>
+              </Column>
 
-                  <Logo></Logo>
-                </Column>
-                <Column>
-                <Title>boboba.com</Title>
-                    <Link href="/"><Home />Home</Link>
-                    <Link href="/TestPage"><Map />Boba Map</Link>
-                    <Link href="/TestPage">< Image />Images</Link>
-                    <Link href="/TestPage"><Trending />Trending</Link>
-                </Column>
-                <Column>
-                <Title>Resources</Title>
-                    <Link href="/TestPage">Terms of Use</Link>
-                    <Link href="/TestPage">EULA</Link>
-                    <Link href="/TestPage">Privacy</Link>
-                    <Link href="/TestPage">cooking Policy</Link>
-                </Column>
-                <Column>
-                <Title>Contact </Title>
-                    <Link href="/TestPage"><Emails />Connent Us</Link>
-                    <Link href="/TestPage"><NEW />What New</Link>
- 
-                </Column>
- 
+              <Column>
+                  <Title>boboba.com</Title>
+                  <Link href="/"><Home />Home</Link>
+                  <Link href="/TestPage"><Map />Boba Map</Link>
+                  <Link href="/TestPage">< Image />Images</Link>
+                  <Link href="/TestPage"><Trending />Trending</Link>
+              </Column>
+
+              <Column>
+                  <Title>Resources</Title>
+                  <Link href="/TestPage">Terms of Use</Link>
+                  <Link href="/TestPage">EULA</Link>
+                  <Link href="/TestPage">Privacy</Link>
+                  <Link href="/TestPage">cooking Policy</Link>
+              </Column>
+
+              <Column>
+              <Title>Contact </Title>
+                  <Link href="/TestPage"><Emails />Connent Us</Link>
+                  <Link href="/TestPage"><NEW />What New</Link>
+              </Column>
+              
             </Row>
             </Wrapper>
-     {/* </Container> */}
         </Section>
  
   )
