@@ -1,47 +1,42 @@
 import React from 'react'
 import styled from 'styled-components';
-
-
 const Section = styled.div`
-  // margin: 0px;
+    
   // position: absolute;
-  // left: 0px;
-  // top: 1029px;
-
   width: 100%;
-  height: 657px;
+  height: 607px;
+  // left: 3px;
+  // top: 1686px;
   background: rgba(253, 150, 143, 0.2);
 `;
 
+const Title = styled.div`  
 
-const Title = styled.div`
+  width: 344px;
+  height: 156px;
 
-  padding-top: 71px;
-  padding-left: 24px;
-  width: 383px;
-  height: 107px;
-  margin-right: auto;
+  padding-right: 40px;
+  padding-top: 228px;
+  margin-left: auto;
   font-family: 'Inria Serif';
   font-style: italic;
   font-weight: 300;
   font-size: 64px;
   line-height: 77px;
+
   display: flex;
-  // align-items: center;
-  // text-align: center;
   letter-spacing: 0.06em;
 
   color: #F3683C;
-
 `;
 
-
-const RecentImage = () => {
+function Trending() {
   return (
     <Section>       
-     <Title>Recent Images</Title>
+        <Title>The most popular</Title>
     </Section>
+
   )
 }
 
-export default RecentImage;
+export default Trending;

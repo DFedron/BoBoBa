@@ -13,10 +13,9 @@ const Section = styled.section`
     background attachment fixed;
     background-size:cover;
     grid-template-rows: repeat(5, 180px);
-    // position: absolute;
+    padding-top: 125px;
     width: 100%;
-    // left: 0px;
-    // top: 125px;
+
 
 
 `;
@@ -87,7 +86,7 @@ const Button = styled.div`
 const Hellopage = () =>
 {
     return(
-        <div style = {{display: "block"}}>
+        <div id = "Home">
             <Section>
                 <ContentOne></ContentOne>
                 <ContentOne>
@@ -100,11 +99,12 @@ const Hellopage = () =>
                     Gimme Boba!
                 </Button>                
 
-            </Section>
+            
 
-            <RecentImage/>
-            <Trending  />
-            <ButtomNavBar /> 
+            </Section>
+                <RecentImage/>
+                <Trending  />
+                <ButtomNavBar /> 
         </div>
 
 

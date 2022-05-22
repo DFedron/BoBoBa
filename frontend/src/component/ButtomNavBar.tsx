@@ -21,9 +21,11 @@ const Logo = styled.div`
 
 function ButtomNavBar() {
   return (
-    <Section>
-        <Logo></Logo>
-    </Section>
+      
+        <Section>
+            <Logo></Logo>
+        </Section>
+ 
   )
 }
 
