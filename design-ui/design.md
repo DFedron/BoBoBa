@@ -5,6 +5,4 @@ You can click the layers name at left side to select the layer
 
 Then click inspect at right side to see the properties and get the CSS code
 
-For the Home page there are 
-1.nevbar(show the logo,name,account page)
-   
+Click pages in the right side can change to find page and user sign-up page
