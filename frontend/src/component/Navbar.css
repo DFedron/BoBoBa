@@ -1,8 +1,7 @@
 
   .nav-menu {
-    /* z-index: -1; */
+
   background: rgba(253, 150, 143, 0.1);
-  /* background: rgba(45, 45, 45, 1); */
   width: 400px;
   height: 100vh;
   display: flex;
@@ -47,8 +46,6 @@
 .nav-menu-items {
   width: 100%;
 }
-
-
 
 span {
   margin-left: 16px;

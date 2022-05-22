@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Section = styled.div`
   width: 100%;
   height: 657px;
-  background: rgba(253, 150, 143, 0.2);
+  // background: rgba(253, 150, 143, 0.2);
 `;
 
 

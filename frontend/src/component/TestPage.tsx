@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-
-const ContentTwo = styled.div`
+import ButtomNavBar from './FooterNavBar';
+const Content = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -12,18 +12,19 @@ const ContentTwo = styled.div`
     font-size: 128px;
     line-height: 179px;
 
-    position: absolute;
-    top: 125px;
-    left: 200px;
+    // position: absolute;
+    // top: 125px;
+    // left: 200px;
     letter-spacing: 0.1em;
-
+    padding: 350px 30px;
     color: #F06C98;
 `;
 
 function TestPage() {
   return (
     <div className='Testpage'>
-            <ContentTwo>Boba Map!!!!!!!!</ContentTwo>
+            <Content>Boba Map!!!!!!!!</Content>
+            <ButtomNavBar></ButtomNavBar>
     </div>
 
 

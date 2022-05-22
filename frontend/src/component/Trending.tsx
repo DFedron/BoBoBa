@@ -7,7 +7,7 @@ const Section = styled.div`
   height: 607px;
   // left: 3px;
   // top: 1686px;
-  background: rgba(253, 150, 143, 0.2);
+  // background: rgba(253, 150, 143, 0.2);
 `;
 
 const Title = styled.div`  

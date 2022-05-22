@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import background from '../images/blur-restaurant-interior.jpeg';
 import RecentImage from './RecentImage';
 import Trending from './Trending';
-import ButtomNavBar from './ButtomNavBar';
+import ButtomNavBar from './FooterNavBar';
 
 
 const Section = styled.section`

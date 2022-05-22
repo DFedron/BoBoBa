@@ -139,6 +139,10 @@ const Break = styled.div`
     margin: 5px 5px;
 `;
 
+// let styles = ` 
+//     -webkit-transition: opacity 300ms ease-in-out
+//     transition: opacity 300ms ease-in-out
+//     opacity: 0.5`
 
 const Navbar=()=>
 {
@@ -149,12 +153,22 @@ const Navbar=()=>
         if(sidebar === false){
             if (typeof window != 'undefined' && window.document) {
                 document.body.style.overflow = 'hidden';
-                // document.getElementById("Home").style.opacity = 0.1;
+                // let elem = document.getElementById("Home");
+                // console.log(elem);
+
+                // if(elem){
+                    
+                //     elem.style.cssText = styles;
+                    
+                // }
             }
         }
         else{
             document.body.style.overflow = 'unset';
-            // document.getElementById("Home").style.opacity = 1;
+            // let elem = document.getElementById("Home");
+            // if(elem){
+            //     elem.style.opacity = "1";
+            // }
         }
 
     }
