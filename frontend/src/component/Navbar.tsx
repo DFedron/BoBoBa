@@ -236,7 +236,7 @@ const Navbar=()=>
             </nav>    
         
             <Logo></Logo>
-            <Title>Boboba</Title>
+            <Title>boboba</Title>
             <ButtonContainer>
 
                 <Link to='/SignIn' style={{ textDecoration: 'none' }}>
