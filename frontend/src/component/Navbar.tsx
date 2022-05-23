@@ -220,7 +220,7 @@ const Navbar=()=>
                         </li>
                     );
                     })}
-                    
+
                     <Break />
                     {SidebarDataPart4.map((item, index) => {
                     return (
@@ -238,13 +238,20 @@ const Navbar=()=>
             <Logo></Logo>
             <Title>Boboba</Title>
             <ButtonContainer>
-                <Link to='/SignUp' style={{ textDecoration: 'none' }}>
+
+                <Link to='/SignIn' style={{ textDecoration: 'none' }}>
                     <ButtonSignIn>
                         Sign In
-                    </ButtonSignIn> 
-                </Link>    
+                    </ButtonSignIn>
+                </Link>     
+
                 
-                <ButtonMyAccount>MyAccount</ButtonMyAccount>
+
+                <Link to='/SignUp' style={{ textDecoration: 'none' }}>
+                    <ButtonMyAccount>
+                        MyAccount
+                    </ButtonMyAccount> 
+                </Link>  
             </ButtonContainer>
         </NavbarContainer>
      
