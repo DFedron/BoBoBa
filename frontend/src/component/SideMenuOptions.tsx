@@ -118,13 +118,13 @@ export const SidebarDataPart1 = [
   export const SidebarDataPart2 = [
     {
       title: 'Sign In',
-      path: '/TestPage',
+      path: '/SignIn',
       icon: <SignIn />,
       cName: 'nav-text'
     },
     {
       title: 'Account',
-      path: '/TestPage',
+      path: '/SignUp',
       icon: <Users />,
       cName: 'nav-text'
     },
