@@ -1,6 +1,6 @@
 import React  from 'react';
 import styled from 'styled-components';
-import logo from '../images/Logo.png';
+import tapioca from '../images/tapioca.png'
 import menu from '../images/menu.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -23,33 +23,37 @@ const NavbarContainer = styled.div`
 `;
 
 const Logo = styled.div`    
-    background: url(${logo}) no-repeat;
+    background: url(${tapioca}) no-repeat;
 
-    width: 120px;
+    width: 130px;
     height: 120px;
-    margin: 0px 15px;
+    margin: 0px 25px;
     justify-content: center;
     align-items: center;
     text-align: center;
     align-self: center;
-
+    cursor: pointer;
     background-size:cover;
 
 `;
 
+
 const Menu = styled.div`    
     background: url(${menu}) no-repeat;
-
     width: 80px;
     height: 80px;
-    // justify-content: center;
-    // align-items: center;
-    // text-align: center;
-    // align-self: center;
-    margin: 20px 15px;
+    margin-top: 25px;
+    margin-left: 35px;
+    // padding: 10px;
     background attachment fixed;
-    background-size:cover;
+    background-position: center center;
+    background-size: 60% 60%;
     cursor: pointer;
+    border-radius: 40px;
+    &:hover{
+        background-color: rgba(253, 150, 143, 0.4);
+    }
+
 `;
 const ButtonContainer = styled.div`
     display: flex;
@@ -150,26 +154,26 @@ const Navbar=()=>
 
     const showSidebar = () => {
         setSidebar(!sidebar);
-        if(sidebar === false){
-            if (typeof window != 'undefined' && window.document) {
-                document.body.style.overflow = 'hidden';
-                // let elem = document.getElementById("Home");
-                // console.log(elem);
+        // if(sidebar === false){
+        //     if (typeof window != 'undefined' && window.document) {
+        //         document.body.style.overflow = 'hidden';
+        //         // let elem = document.getElementById("Home");
+        //         // console.log(elem);
 
-                // if(elem){
+        //         // if(elem){
                     
-                //     elem.style.cssText = styles;
+        //         //     elem.style.cssText = styles;
                     
-                // }
-            }
-        }
-        else{
-            document.body.style.overflow = 'unset';
-            // let elem = document.getElementById("Home");
-            // if(elem){
-            //     elem.style.opacity = "1";
-            // }
-        }
+        //         // }
+        //     }
+        // }
+        // else{
+        //     document.body.style.overflow = 'unset';
+        //     // let elem = document.getElementById("Home");
+        //     // if(elem){
+        //     //     elem.style.opacity = "1";
+        //     // }
+        // }
 
     }
     return(
@@ -179,7 +183,7 @@ const Navbar=()=>
             
             <div className='navbar'>
                 <Link to='#' className='menu-bars'>
-                    <Menu onClick={showSidebar} />
+                    <Menu onClick={showSidebar} /> 
                 </Link>
             </div>
 
@@ -234,8 +238,9 @@ const Navbar=()=>
                     })}
                 </ul>
             </nav>    
-        
-            <Logo></Logo>
+            <Link to='/'style={{ textDecoration: 'none' }}>
+                <Logo ></Logo>
+            </Link>
             <Title>boboba</Title>
             <ButtonContainer>
 

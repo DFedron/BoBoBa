@@ -4,7 +4,7 @@ import background from '../images/blur-restaurant-interior.jpeg';
 import RecentImage from './RecentImage';
 import Trending from './Trending';
 import ButtomNavBar from './FooterNavBar';
-
+import { Link } from 'react-router-dom';
 
 const Section = styled.section`
     background: url(${background}) no-repeat center center;
@@ -75,7 +75,8 @@ const Button = styled.div`
     box-shadow: 10px 20px 3px 6px rgba(0, 0, 0, 0.64);
     border-radius: 61.5px;
     margin: auto;
-    padding: 0px 20px;
+    
+    width: 44%;
 `;
 
 
@@ -95,10 +96,11 @@ const Hellopage = () =>
                 <ContentTwo>
                     BoBoBa
                 </ContentTwo>
-                <Button>
-                    Gimme Boba!
-                </Button>                
-
+                <Link to='/boba-map' style={{ textDecoration: 'none' }}>
+                    <Button>
+                        Gimme Boba!
+                    </Button>                
+                </Link>
             
 
             </Section>

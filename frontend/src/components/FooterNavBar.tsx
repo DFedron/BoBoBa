@@ -162,7 +162,7 @@ function ButtomNavBar() {
               <Column>
                   <Title>boboba.com</Title>
                   <Link href="/"><Home />Home</Link>
-                  <Link href="/TestPage"><Map />Boba Map</Link>
+                  <Link href="/boba-map"><Map />Boba Map</Link>
                   <Link href="/TestPage">< Image />Images</Link>
                   <Link href="/TestPage"><Trending />Trending</Link>
               </Column>

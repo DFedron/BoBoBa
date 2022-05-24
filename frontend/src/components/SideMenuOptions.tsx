@@ -94,7 +94,7 @@ export const SidebarDataPart1 = [
     },
     {
       title: 'Boba Map',
-      path: 'TestPage',
+      path: '/boba-map',
       icon: <Map />,
       cName: 'nav-text'
     },
