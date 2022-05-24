@@ -45,7 +45,7 @@ const ContentTwo = styled.div`
     font-family: 'HanziPen TC';
     font-style: normal;
     font-weight: 400;
-    font-size: 128px;
+    font-size: 45px;
     line-height: 179px;
 
     letter-spacing: 0.1em;
@@ -94,14 +94,14 @@ const Hellopage = () =>
             <Section>
                 <ContentOne></ContentOne>
                 <ContentOne>
-                    Find The Best
+                    Drink only the Best
                 </ContentOne>
                 <ContentTwo>
-                    BoBoBa
+                    Find the best local bubble tea stores near you with one click of a button.
                 </ContentTwo>
                 <Link to='/boba-map' style={{ textDecoration: 'none' }}>
                     <Button>
-                        Gimme Boba!
+                        It's Boba Time!
                     </Button>                
                 </Link>
             
