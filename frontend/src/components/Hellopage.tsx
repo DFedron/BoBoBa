@@ -77,6 +77,9 @@ const Button = styled.div`
     margin: auto;
     
     width: 44%;
+    &:hover{
+        background-color: #fff;
+    }
 `;
 
 

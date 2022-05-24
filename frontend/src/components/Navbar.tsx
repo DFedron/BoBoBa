@@ -6,12 +6,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarDataPart1, SidebarDataPart2, SidebarDataPart3, SidebarDataPart4 } from './SideMenuOptions';
 
+import '../styles/Navbar.css';
 
-
-import './Navbar.css';
-
-
-// import { IconContext } from 'react-icons';
 
 const NavbarContainer = styled.div`
     width: 100%;
@@ -143,10 +139,13 @@ const Break = styled.div`
     margin: 5px 5px;
 `;
 
-// let styles = ` 
-//     -webkit-transition: opacity 300ms ease-in-out
-//     transition: opacity 300ms ease-in-out
-//     opacity: 0.5`
+const VerticalBreak = styled.div`
+    background: rgba(249, 128, 120, 0.5);
+    width: 3px;
+    height: 80px;
+    margin: 30px 10px;
+`;
+
 
 const Navbar=()=>
 {
@@ -241,7 +240,8 @@ const Navbar=()=>
             <Link to='/'style={{ textDecoration: 'none' }}>
                 <Logo ></Logo>
             </Link>
-            <Title>boboba</Title>
+            <VerticalBreak />
+            <Title>Boboba</Title>
             <ButtonContainer>
 
                 <Link to='/SignIn' style={{ textDecoration: 'none' }}>
