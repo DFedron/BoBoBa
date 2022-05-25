@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
+import boba from '../images/Boba.png'
+
 const Section = styled.div`
-    
+  display: flex;
   // position: absolute;
   width: 100%;
-  height: 607px;
+  height: 807px;
   // left: 3px;
   // top: 1686px;
   // background: rgba(253, 150, 143, 0.2);
@@ -30,9 +32,23 @@ const Title = styled.div`
   color: #F3683C;
 `;
 
+const Boba = styled.div`    
+    background: url(${boba}) no-repeat;
+    width: 400px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 20%;
+    background attachment fixed;
+    background-size:cover;
+    // background-size: 60% 60%;
+    background-position: center;
+    
+`;
+
 function Trending() {
   return (
     <Section>       
+        <Boba />
         <Title>The most popular</Title>
     </Section>
 
