@@ -200,7 +200,7 @@ function ButtomNavBar() {
                   <Link to='/contact-us' style={{ textDecoration: 'none' }}>
                     <Text><Emails />Connent Us</Text>
                   </Link>
-                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                  <Link to='/whats-new' style={{ textDecoration: 'none' }}>
                     <Text><NEW />What New</Text>
                   </Link>                  
 

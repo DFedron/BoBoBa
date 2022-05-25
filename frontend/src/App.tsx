@@ -11,6 +11,7 @@ import ContactUs from './components/ContactUs'
 import Image from './components/image'
 // import styled from 'styled-components';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import WhatsNew from './components/WhatsNew';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/boba-map" element={<BobaMap />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/image" element={<Image />} />
+      <Route path="/whats-new" element={<WhatsNew />} />
     </Routes>
 </BrowserRouter>
   );

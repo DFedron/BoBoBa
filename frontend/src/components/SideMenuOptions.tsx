@@ -142,7 +142,7 @@ export const SidebarDataPart1 = [
     },
     {
       title: 'What New',
-      path: '/TestPage',
+      path: '/whats-new',
       icon: <NEW />,
       cName: 'nav-text'
     },
