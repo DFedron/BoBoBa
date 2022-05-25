@@ -70,7 +70,7 @@ const TextImage = styled.div`
     left: 50px;
     top: 149px;
 
-
+    z-index: -1;
     font-family: 'Inria Serif';
     font-style: normal;
     font-weight: 700;
