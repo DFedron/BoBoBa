@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 // import ButtomNavBar from './FooterNavBar'
-// import boba from '../images/Boba.png';
+import boba from '../images/Boba.png';
+import star from '../images/Star.png';
 
 const Section = styled.div`
     // z-index: -1;
@@ -14,6 +15,11 @@ const Section = styled.div`
 
 
 
+const TextWrapper = styled.div`
+
+    height: 250px;
+
+`;
 
 const TextImage = styled.div`
     position: absolute;
@@ -77,31 +83,183 @@ const Text = styled.div`
     color: #F98078;
 `;
 
-// const Boba = styled.div`    
-//     background: url(${boba}) no-repeat;
-//     width: 207px;
-//     height: 276px;
-//     margin-top: 40px;
-//     background attachment fixed;
-//     background-size:cover;
-//     // background-size: 60% 60%;
-//     background-position: center;
-//     display: block;
-// `;
+const Boba = styled.div`    
+    background: url(${boba}) no-repeat;
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
+    background attachment fixed;
+    background-size:cover;
+    // background-size: 60% 60%;
+    background-position: center center;
+    // display: block;
+    justify-content: 'center'
+`;
+
+const Star = styled.div`    
+    background: url(${star}) repeat-x;
+    width: 100px;
+    height: 15px;
+    margin-left: 20px;
+    background attachment fixed;
+    background-size:cover;
+    background-size: 19.8px 17px;
+    background-position: center center;
+    // display: block;
+`;
 
 
+const ContentSection = styled.div`
+    display: flex;
+    justify-content: space-around;
+    
+`;
+
+const Wrapper = styled.div`
+
+    width: 340px;
+
+`;
+
+
+const Title  = styled.div`
+
+    font-family: 'Inria Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #F98078;
+
+`;
+
+const ListWrapper = styled.div`
+
+    display: block;
+    margin-top: 30px;
+`;
+
+const ListUp = styled.div`
+    
+    font-family: 'Inria Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+
+    letter-spacing: 0.06em;
+
+    color: #F98078;
+`;
+
+const ListDoow = styled.div`
+
+    font-family: 'Inria Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    justify-content: center;
+    color: #F98078;
+`;
 
 function Trending() {
-  return (
 
+    const Users = [
+        {
+        id: '1.',
+        name: 'User_123',
+        followers: 'Followers: 12345',
+        post: 'Post: 12345'
+        },
+        {
+        id: '2.',
+        name: 'User_123',
+        followers: 'Followers: 12345',
+        post: 'Post: 12345'
+        },
+        {
+        id: '3.',
+        name: 'User_123',
+        followers: 'Followers: 12345',
+        post: 'Post: 12345'
+        },
+        {
+        id: '4.',
+        name: 'User_123',
+        followers: 'Followers: 12345',
+        post: 'Post: 12345'
+        },
+        {
+        id: '5.',
+        name: 'User_123',
+        followers: 'Followers: 12345',
+        post: 'Post: 12345'
+        },
+    
+    ];
+
+
+  return (
         <Section>
+            <TextWrapper>
                 <TextImage>
                     Trandings
                 </TextImage>
                 <VerticalBreak />
                 <Break />
                 <Text>Find the most popular Boba</Text>
- 
+            </TextWrapper>
+            <ContentSection>
+                <Wrapper>
+                    <Title>Top Stores</Title>
+                    <Boba />
+                    <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
+                    <Boba />
+                    <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
+                    <Boba />
+                    <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
+                    <Boba />
+                    <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
+                </Wrapper>
+                <Wrapper>
+                    <Title>Top Users</Title>
+                    
+                    <ul style={{listStyle: 'none'}}>
+
+                    {Users.map((item, index) => {
+                    return (
+                       <ListWrapper>
+                        <li key={index}>  
+                        
+                            <ListUp>      
+                                <span >{item.id}</span>
+                                <span>{item.name}</span>
+                            </ListUp>
+                            <ListDoow>
+                                <p>{item.followers}  <span>{item.post}</span></p>
+                            </ListDoow>
+                        </li>
+                        </ListWrapper>
+                    );
+                    })}
+                
+                    </ul>
+                    
+            
+                </Wrapper>
+            </ContentSection>
         </Section>
 
 
