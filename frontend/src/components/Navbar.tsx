@@ -143,7 +143,8 @@ const VerticalBreak = styled.div`
     background: rgba(249, 128, 120, 0.5);
     width: 3px;
     height: 80px;
-    margin: 30px 10px;
+    margin-left: 10px;
+    margin-top: 30px;
 `;
 
 

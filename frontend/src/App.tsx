@@ -7,6 +7,7 @@ import TestPage from './components/TestPage';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import BobaMap from './templetes/BobaMap'
+import ContactUs from './components/ContactUs'
 // import styled from 'styled-components';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
       <Route path='/SignUp' element={<SignUp/>} /> 
       <Route path='/SignIn' element={<SignIn/>} /> 
       <Route path="/boba-map" element={<BobaMap />} />
+      <Route path="/contact-us" element={<ContactUs />} />
     </Routes>
 </BrowserRouter>
   );

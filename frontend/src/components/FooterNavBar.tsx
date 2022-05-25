@@ -177,7 +177,7 @@ function ButtomNavBar() {
 
               <Column>
               <Title>Contact </Title>
-                  <Link href="/TestPage"><Emails />Connent Us</Link>
+                  <Link href="/contact-us"><Emails />Connent Us</Link>
                   <Link href="/TestPage"><NEW />What New</Link>
               </Column>
               
