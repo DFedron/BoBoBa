@@ -5,12 +5,14 @@ import boba from '../images/Boba.png'
 const Section = styled.div`
   width: 100%;
   height: 757px;
+  padding-top: 120px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr;
   // background: rgba(253, 150, 143, 0.2);
 `;
 
 const SectionOne = styled.div`
+  
   display: flex;
   justify-content: space-around;
 `;
