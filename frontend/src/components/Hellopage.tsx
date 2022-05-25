@@ -62,7 +62,7 @@ const Button = styled.div`
     font-family: 'Irish Grover';
     font-style: normal;
     font-weight: 400;
-    font-size: 90px;
+    font-size: 70px;
     line-height: 109px;
 
     letter-spacing: 0.13em;
@@ -75,8 +75,8 @@ const Button = styled.div`
     box-shadow: 10px 20px 3px 6px rgba(0, 0, 0, 0.64);
     border-radius: 61.5px;
     margin: auto;
-    
-    width: 44%;
+    padding: 0 30px;
+    width: fit-content;
     &:hover{
         background-color: #fff;
     }
@@ -98,12 +98,12 @@ const Hellopage = () =>
                 </ContentOne>
                 <ContentTwo>
                     Find the best local bubble tea stores near you with one click of a button.
-                </ContentTwo>
-                <Link to='/boba-map' style={{ textDecoration: 'none' }}>
-                    <Button>
-                        It's Boba Time!
-                    </Button>                
-                </Link>
+                </ContentTwo>  
+                <Button>
+                    <Link to='/boba-map' style={{ textDecoration: 'none', color: "#F3683C"}}>
+                            It's Boba Time!                 
+                    </Link>
+                </Button> 
             
 
             </Section>
