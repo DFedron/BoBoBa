@@ -106,7 +106,7 @@ export const SidebarDataPart1 = [
     },
     {
       title: 'Trending',
-      path: '/TestPage',
+      path: '/trending',
       icon: <Trending />,
       cName: 'nav-text'
     },

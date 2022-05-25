@@ -2,7 +2,7 @@ import React  from 'react';
 import styled from 'styled-components';
 import background from '../images/blur-restaurant-interior.jpeg';
 import RecentImage from './RecentImage';
-import Trending from './Trending';
+import Popular from './Popular';
 import ButtomNavBar from './FooterNavBar';
 import { Link } from 'react-router-dom';
 
@@ -109,7 +109,7 @@ const Hellopage = () =>
 
             </Section>
                 <RecentImage/>
-                <Trending  />
+                <Popular  />
                 <ButtomNavBar /> 
         </div>
 

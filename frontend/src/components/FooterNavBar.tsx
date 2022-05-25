@@ -172,7 +172,7 @@ function ButtomNavBar() {
                   <Link to='/image' style={{ textDecoration: 'none' }}>
                     <Text>< Image />Images</Text>
                   </Link>
-                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                  <Link to='/trending' style={{ textDecoration: 'none' }}>
                     <Text><Trending />Trending</Text>
                   </Link>
                   

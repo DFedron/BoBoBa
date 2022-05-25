@@ -12,6 +12,7 @@ import Image from './components/image'
 // import styled from 'styled-components';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import WhatsNew from './components/WhatsNew';
+import Trending from './components/Trending';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/image" element={<Image />} />
       <Route path="/whats-new" element={<WhatsNew />} />
+      <Route path="/trending" element={<Trending />} />
     </Routes>
 </BrowserRouter>
   );
