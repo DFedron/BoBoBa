@@ -1,6 +1,7 @@
 import React  from 'react';
 import styled from 'styled-components';
 import background from '../images/blur-restaurant-interior.jpeg';
+
 import RecentImage from './RecentImage';
 import Popular from './Popular';
 import ButtomNavBar from './FooterNavBar';
@@ -19,6 +20,8 @@ const Section = styled.section`
 
 
 `;
+
+
 const ContentOne = styled.div`
 
     margin-buttom: 0px;

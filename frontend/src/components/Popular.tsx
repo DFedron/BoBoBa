@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import boba from '../images/Boba.png'
+import love from '../images/love.png'
 
 const Section = styled.div`
   display: flex;
@@ -10,6 +11,15 @@ const Section = styled.div`
   // left: 3px;
   // top: 1686px;
   // background: rgba(253, 150, 143, 0.2);
+`;
+
+const Love = styled.div`    
+    background: url(${love}) no-repeat;
+    width: 23px;
+    height: 23px;
+    background attachment fixed;
+    background-size:cover;
+    margin: 10px
 `;
 
 const Title = styled.div`  
@@ -32,12 +42,26 @@ const Title = styled.div`
   color: #F3683C;
 `;
 
+const LogoWrapper = styled.div`    
+  display: block;
+  margin-top: 40px;
+  margin-left: 20%;
+
+  font-family: 'Inria Serif';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+
+  letter-spacing: 0.06em;
+
+  color: #000000;
+`;
 const Boba = styled.div`    
     background: url(${boba}) no-repeat;
     width: 400px;
     height: 500px;
-    margin-top: 40px;
-    margin-left: 20%;
+
     background attachment fixed;
     background-size:cover;
     // background-size: 60% 60%;
@@ -47,8 +71,14 @@ const Boba = styled.div`
 
 function Popular() {
   return (
-    <Section>       
-        <Boba />
+    <Section> 
+        <LogoWrapper>      
+          <Boba></Boba>
+          <div style={{display: 'flex'}}>
+            <Love />
+            <span style={{margin: '10px'}} >234,234,567,987</span>
+          </div>
+        </LogoWrapper>
         <Title>The most popular</Title>
     </Section>
 
