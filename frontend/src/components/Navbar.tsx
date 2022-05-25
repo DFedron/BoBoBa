@@ -86,35 +86,35 @@ const ButtonSignIn = styled.div`
     }
 `;
 
-const ButtonMyAccount = styled.div`
+// const ButtonMyAccount = styled.div`
 
-    display: flex;
-    width: 233px;
-    height: 60px;
-    cursor: pointer;
+//     display: flex;
+//     width: 233px;
+//     height: 60px;
+//     cursor: pointer;
 
-    font-family: 'Inria Serif';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 43px;
+//     font-family: 'Inria Serif';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 43px;
 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    align-self: center;
-    letter-spacing: 0.06em;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     align-self: center;
+//     letter-spacing: 0.06em;
     
-    color: #FFFFFF;
+//     color: #FFFFFF;
     
-    mix-blend-mode: normal;
+//     mix-blend-mode: normal;
 
-    background: #F98078;
-    mix-blend-mode: multiply;
-    opacity: 0.6;
-    box-shadow: 6px 7px 6px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 35px;
-`;
+//     background: #F98078;
+//     mix-blend-mode: multiply;
+//     opacity: 0.6;
+//     box-shadow: 6px 7px 6px 2px rgba(0, 0, 0, 0.5);
+//     border-radius: 35px;
+// `;
 
 const Title = styled.div`
 
@@ -257,11 +257,11 @@ const Navbar=()=>
 
                 
 
-                <Link to='/SignUp' style={{ textDecoration: 'none' }}>
+                {/* <Link to='/SignUp' style={{ textDecoration: 'none' }}>
                     <ButtonMyAccount>
                         MyAccount
                     </ButtonMyAccount> 
-                </Link> 
+                </Link>  */}
             </ButtonContainer>
         </NavbarContainer>
      
