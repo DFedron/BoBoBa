@@ -5,6 +5,7 @@ import globalLogo from "../images/global-connection.png"
 import discord from "../images/discord.png"
 import github  from "../images/github.png"
 import twitter from "../images/twitter.png"
+import ButtomNavBar from './FooterNavBar';
 
 const Section = styled.div`
     margin: 0px;
@@ -96,7 +97,7 @@ const GlobalLogo = styled.div`
 `;
 
 const SectionDown = styled.div`
-    margin: 0px;
+    margin-bottom: 150px;
     padding; 0px;
     height: 517px;
     background: #fff;
@@ -188,6 +189,7 @@ function ContactUs() {
                     <GitHub />
                 </LogoWrapper>
             </SectionDown>
+            <ButtomNavBar />
         </Section>
  
   )
