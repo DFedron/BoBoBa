@@ -100,7 +100,7 @@ export const SidebarDataPart1 = [
     },
     {
       title: 'Images',
-      path: '/TestPage',
+      path: '/image',
       icon: <Image />,
       cName: 'nav-text'
     },

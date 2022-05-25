@@ -34,7 +34,7 @@ const Logo = styled.div`
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    display: grid;
     // max-width: 1000px;
     margin: 0 auto;
    
@@ -163,7 +163,7 @@ function ButtomNavBar() {
                   <Title>boboba.com</Title>
                   <Link href="/"><Home />Home</Link>
                   <Link href="/boba-map"><Map />Boba Map</Link>
-                  <Link href="/TestPage">< Image />Images</Link>
+                  <Link href="/image">< Image />Images</Link>
                   <Link href="/TestPage"><Trending />Trending</Link>
               </Column>
 

@@ -166,7 +166,7 @@ const Twitter = styled.div`
 
 `;
 
-function ButtomNavBar() {
+function ContactUs() {
   return (
         <Section>
             <SectionUp>
@@ -193,4 +193,4 @@ function ButtomNavBar() {
   )
 }
 
-export default ButtomNavBar;
+export default ContactUs;
