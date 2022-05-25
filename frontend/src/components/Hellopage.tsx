@@ -42,11 +42,12 @@ const ContentTwo = styled.div`
     align-items: center;
     text-align: center;
     align-self: center;
+    
     font-family: 'HanziPen TC';
     font-style: normal;
     font-weight: 400;
     font-size: 45px;
-    line-height: 179px;
+    line-height: 90px;
 
     letter-spacing: 0.1em;
 
