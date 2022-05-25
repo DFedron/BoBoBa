@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ButtomNavBar from './FooterNavBar'
 import boba from '../images/Boba.png';
 const Section = styled.div`
+    z-index: -1;
     padding-top: 125px;
     display: grid;
     // grid-template-columns: repeat(5, 1fr);
@@ -85,7 +86,7 @@ const TextImage = styled.div`
 
 const VerticalBreak = styled.div`
     position: absolute;
-
+    z-index: -1;
     width: 8px;
     height: 120px;
     background: #F98078;
@@ -95,6 +96,7 @@ const VerticalBreak = styled.div`
 `;
 
 const Break = styled.div`
+    z-index: -1;
     position: absolute;
     width: 520px;
     height: 8px;
