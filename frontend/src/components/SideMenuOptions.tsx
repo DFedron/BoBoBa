@@ -135,7 +135,7 @@ export const SidebarDataPart1 = [
 
   export const SidebarDataPart3 = [
     {
-      title: 'Connect Us',
+      title: 'Contact Us',
       path: '/contact-us',
       icon: <Emails />,
       cName: 'nav-text'

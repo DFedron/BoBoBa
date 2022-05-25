@@ -198,7 +198,7 @@ function ButtomNavBar() {
               <Column>
               <Title>Contact </Title>
                   <Link to='/contact-us' style={{ textDecoration: 'none' }}>
-                    <Text><Emails />Connent Us</Text>
+                    <Text><Emails />Contact Us</Text>
                   </Link>
                   <Link to='/whats-new' style={{ textDecoration: 'none' }}>
                     <Text><NEW />What New</Text>
