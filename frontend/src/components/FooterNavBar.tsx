@@ -9,6 +9,8 @@ import map from "../images/map.png"
 
 import New from "../images/new.png"
 import trending from "../images/trending.png"
+
+import {Link} from 'react-router-dom'
 const Section = styled.div`
   
   // width: 100%;
@@ -57,7 +59,7 @@ const Row = styled.div`
   // }
 `;
 
-const Link = styled.a`
+const Text = styled.a`
   font-family: 'Inria Serif';
   font-style: normal;
   font-weight: 520;
@@ -161,24 +163,47 @@ function ButtomNavBar() {
 
               <Column>
                   <Title>boboba.com</Title>
-                  <Link href="/"><Home />Home</Link>
-                  <Link href="/boba-map"><Map />Boba Map</Link>
-                  <Link href="/image">< Image />Images</Link>
-                  <Link href="/TestPage"><Trending />Trending</Link>
+                  <Link to='/' style={{ textDecoration: 'none' }}>
+                    <Text><Home />Home</Text>
+                  </Link>
+                  <Link to='/boba-map' style={{ textDecoration: 'none' }}>
+                     <Text><Map />Boba Map</Text>
+                  </Link>
+                  <Link to='/image' style={{ textDecoration: 'none' }}>
+                    <Text>< Image />Images</Text>
+                  </Link>
+                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                    <Text><Trending />Trending</Text>
+                  </Link>
+                  
               </Column>
 
               <Column>
                   <Title>Resources</Title>
-                  <Link href="/TestPage">Terms of Use</Link>
-                  <Link href="/TestPage">EULA</Link>
-                  <Link href="/TestPage">Privacy</Link>
-                  <Link href="/TestPage">cooking Policy</Link>
+                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                    <Text>Terms of Use</Text>
+                  </Link>
+                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                    <Text>EULA</Text>
+                  </Link>
+                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                    <Text>Privacy</Text>
+                  </Link>
+                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                    <Text>cooking Policy</Text>
+                  </Link>
+
               </Column>
 
               <Column>
               <Title>Contact </Title>
-                  <Link href="/contact-us"><Emails />Connent Us</Link>
-                  <Link href="/TestPage"><NEW />What New</Link>
+                  <Link to='/contact-us' style={{ textDecoration: 'none' }}>
+                    <Text><Emails />Connent Us</Text>
+                  </Link>
+                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
+                    <Text><NEW />What New</Text>
+                  </Link>                  
+
               </Column>
               
             </Row>
