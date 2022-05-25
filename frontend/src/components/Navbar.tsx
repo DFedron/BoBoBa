@@ -13,9 +13,10 @@ const NavbarContainer = styled.div`
     width: 100%;
     height: 125px;
     display: flex;
-    background: rgba(253, 150, 143, 0.2);
+    // background: rgba(253, 150, 143, 0.2);
+    background: #ffe4e1;
     position: fixed;
-
+    z-index: 100;
 `;
 
 const Logo = styled.div`    
