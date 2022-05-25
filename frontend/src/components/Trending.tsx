@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 // import ButtomNavBar from './FooterNavBar'
-import boba from '../images/Boba.png';
+// import boba from '../images/Boba.png';
 
 const Section = styled.div`
     // z-index: -1;
@@ -77,17 +77,17 @@ const Text = styled.div`
     color: #F98078;
 `;
 
-const Boba = styled.div`    
-    background: url(${boba}) no-repeat;
-    width: 207px;
-    height: 276px;
-    margin-top: 40px;
-    background attachment fixed;
-    background-size:cover;
-    // background-size: 60% 60%;
-    background-position: center;
-    display: block;
-`;
+// const Boba = styled.div`    
+//     background: url(${boba}) no-repeat;
+//     width: 207px;
+//     height: 276px;
+//     margin-top: 40px;
+//     background attachment fixed;
+//     background-size:cover;
+//     // background-size: 60% 60%;
+//     background-position: center;
+//     display: block;
+// `;
 
 
 
