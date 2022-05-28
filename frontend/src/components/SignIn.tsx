@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import ButtomNavBar from './FooterNavBar';
+import LoginHooks from './LoginHooks';
+
 const Content = styled.div`
     justify-content: center;
     align-items: center;
@@ -72,11 +74,8 @@ function SignIn() {
     <div className='SignIn'>
         <Content>
             <Form>
-                <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-client_id" content="boboba.apps.googleusercontent.com">
-        </meta>
-        <div className="g-signin2" data-onsuccess="onSignIn"></div>
                 <Title>Sign In</Title>
+                <LoginHooks />
                 <Block>
                     <Label>Email Address</Label>
                     <Input />
