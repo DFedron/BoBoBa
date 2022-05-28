@@ -1,4 +1,4 @@
-import { useGoogleLogin, UseGoogleLoginResponse } from 'react-google-login';
+import { useGoogleLogin, UseGoogleLoginResponse, GoogleLoginResponse, GoogleLoginResponseOffline} from 'react-google-login';
 
 interface response {
   Ba: string;
@@ -15,12 +15,12 @@ interface response {
   };
   tokenId: string;
   tokenObj: {
-
+    expires_in: number,
   }
   zc: object;
 }
 
-export const refreshTokenSetup = (res: response) => {
+export const refreshTokenSetup = (res: GoogleLoginResponse | GoogleLoginResponseOffline) => {
     console.log("Refresh: ", res);
   // Timing to renew access token
   let refreshTiming = (res.tokenObj.expires_in || 3600 - 5 * 60) * 1000;
