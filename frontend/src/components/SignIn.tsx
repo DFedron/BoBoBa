@@ -1,7 +1,8 @@
 import React from 'react'
+import { GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import styled from 'styled-components';
 import ButtomNavBar from './FooterNavBar';
-import LoginHooks from './LoginHooks';
+import {GoogleSignInComponent} from './GoogleSignInComponent';
 
 const Content = styled.div`
     justify-content: center;
@@ -75,7 +76,9 @@ function SignIn() {
         <Content>
             <Form>
                 <Title>Sign In</Title>
-                <LoginHooks />
+                <GoogleSignInComponent loginSuccess={function (response: GoogleLoginResponse | GoogleLoginResponseOffline): void {
+                        throw new Error('Function not implemented.');
+                    } } />
                 <Block>
                     <Label>Email Address</Label>
                     <Input />
