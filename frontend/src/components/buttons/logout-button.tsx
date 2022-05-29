@@ -6,7 +6,7 @@ export const LogoutButton: React.FC = () => {
 
   return (
     <button
-      className="button button--primary button--compact"
+      className="button__logout"
       onClick={() =>
         logout({
           returnTo: window.location.origin,
@@ -17,3 +17,4 @@ export const LogoutButton: React.FC = () => {
     </button>
   );
 };
+

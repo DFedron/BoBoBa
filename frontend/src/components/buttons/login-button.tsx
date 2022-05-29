@@ -5,10 +5,7 @@ export const LoginButton: React.FC = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <button
-      className="button button--primary button--compact"
-      onClick={() => loginWithRedirect()}
-    >
+    <button className="button__login" onClick={() => loginWithRedirect()}>
       Log In
     </button>
   );
