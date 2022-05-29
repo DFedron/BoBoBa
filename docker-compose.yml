@@ -1,0 +1,10 @@
+services:
+  backend:
+    container_name: boboba
+    build:
+      dockerfile: Dockerfile
+      context: /backend
+    volumes:
+      - .:/backend/app
+    ports:
+      - "8000:8000"
