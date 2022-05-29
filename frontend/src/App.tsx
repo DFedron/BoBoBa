@@ -14,12 +14,14 @@ import { Route, Routes} from "react-router-dom";
 import WhatsNew from './components/WhatsNew';
 import Trending from './components/Trending';
 import Navbar from './components/Navbar';
+import { NotFound } from "./components/NotFound";
 
 export const App: React.FC = () => {
   return (
     <div className="page-layout">
     <Navbar />
     
+      <div className="page-layout__content">
     <Routes>
       <Route path='/'   element={<Hellopage/>} />
       <Route path='/TestPage' element={<TestPage/>} /> 
@@ -30,8 +32,10 @@ export const App: React.FC = () => {
       <Route path="/image" element={<Image />} />
       <Route path="/whats-new" element={<WhatsNew />} />
       <Route path="/trending" element={<Trending />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
 
+      </div>
     </div>
 
   );
