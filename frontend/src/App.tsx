@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Navbar from'./components/Navbar';
+
 import Hellopage from'./components/Hellopage';
 import TestPage from './components/TestPage';
 import SignUp from './components/SignUp';
@@ -10,16 +10,14 @@ import BobaMap from './templetes/BobaMap'
 import ContactUs from './components/ContactUs'
 import Image from './components/image'
 // import styled from 'styled-components';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import WhatsNew from './components/WhatsNew';
 import Trending from './components/Trending';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar />
+    
     <Routes>
-
       <Route path='/'   element={<Hellopage/>} />
       <Route path='/TestPage' element={<TestPage/>} /> 
       <Route path='/SignUp' element={<SignUp/>} /> 
@@ -30,7 +28,7 @@ function App() {
       <Route path="/whats-new" element={<WhatsNew />} />
       <Route path="/trending" element={<Trending />} />
     </Routes>
-</BrowserRouter>
+
   );
 }
 
