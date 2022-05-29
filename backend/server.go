@@ -178,6 +178,9 @@ func fetchTenantKeys() {
 
 //Go server application entry point
 func main() {
+	initConfig()
+	fetchTenantKeys()
+
 	//Parse any matching *.html files
 	tpl, _ = tpl.ParseGlob("templates/*.html")
 
