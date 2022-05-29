@@ -196,6 +196,11 @@ func main() {
 	router.Handle("/contact", http.HandlerFunc(ContactHandler))
 	router.Handle("/login", http.HandlerFunc(LoginHandler))
 
+	router.Handle("/api/messages/public", http.HandlerFunc(publicApiHandler))
+	router.Handle("/api/messages/protected", validateToken(http.HandlerFunc(protectedApiHandler)))
+	router.Handle("/api/messages/admin",
+		validateToken(hasPermission(http.HandlerFunc(adminApiHandler), "read:admin-messages")))
+
 	routerWithCORS := handleCORS(router)
 
 	server := &http.Server{
