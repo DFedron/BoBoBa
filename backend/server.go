@@ -192,9 +192,16 @@ func main() {
 	router.Handle("/about", http.HandlerFunc(AboutHandler))
 	router.Handle("/contact", http.HandlerFunc(ContactHandler))
 	router.Handle("/login", http.HandlerFunc(LoginHandler))
-	
+
+	routerWithCORS := handleCORS(router)
+
+	server := &http.Server{
+		Addr:    ":8080",
+		Handler: routerWithCORS,
+	}
+
 	//Start Server, set PORT to 8080
 	//127.0.0.1:8080 for DEV, change back to :8080 for prod
 	fmt.Println("Server Listening on PORT 8080...")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(server.ListenAndServe())
 }
