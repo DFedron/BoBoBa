@@ -1,10 +1,12 @@
-import React  from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import tapioca from '../images/tapioca.png'
 import menu from '../images/menu.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarDataPart1, SidebarDataPart2, SidebarDataPart3, SidebarDataPart4 } from './SideMenuOptions';
+import { AuthenticationButton } from "./buttons/authentication-button";
+import { Auth0Provider } from '@auth0/auth0-react';
 
 import '../styles/Navbar.css';
 
@@ -105,9 +107,9 @@ const ButtonSignIn = styled.div`
 //     text-align: center;
 //     align-self: center;
 //     letter-spacing: 0.06em;
-    
+
 //     color: #FFFFFF;
-    
+
 //     mix-blend-mode: normal;
 
 //     background: #F98078;
@@ -153,8 +155,7 @@ const VerticalBreak = styled.div`
 `;
 
 
-const Navbar=()=>
-{
+export const Navbar: React.FC = () => {
     const [sidebar, setSidebar] = useState(false);
 
     const showSidebar = () => {
@@ -166,9 +167,9 @@ const Navbar=()=>
         //         // console.log(elem);
 
         //         // if(elem){
-                    
+
         //         //     elem.style.cssText = styles;
-                    
+
         //         // }
         //     }
         // }
@@ -181,91 +182,86 @@ const Navbar=()=>
         // }
 
     }
-    return(
-       
-  
-         <NavbarContainer>
-            
-            <div className='navbar'>
-                <Link to='#' className='menu-bars'>
-                    <Menu onClick={showSidebar} /> 
+    return (
+
+        <Auth0Provider
+            domain="YOUR_AUTH0_DOMAIN"
+            clientId="YOUR_AUTH0_CLIENT_ID"
+            redirectUri={window.location.origin}
+        >
+
+
+            <NavbarContainer>
+
+                <div className='navbar'>
+                    <Link to='#' className='menu-bars'>
+                        <Menu onClick={showSidebar} />
+                    </Link>
+                </div>
+
+                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                    <ul className='nav-menu-items' onClick={showSidebar}>
+
+                        {SidebarDataPart1.map((item, index) => {
+                            return (
+                                <li key={index} className={item.cName}>
+                                    <Link to={item.path}>
+                                        {item.icon}
+                                        <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            );
+                        })}
+
+                        <Break />
+                        {SidebarDataPart2.map((item, index) => {
+                            return (
+                                <li key={index} className={item.cName}>
+                                    <Link to={item.path}>
+                                        {item.icon}
+                                        <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            );
+                        })}
+
+                        <Break />
+                        {SidebarDataPart3.map((item, index) => {
+                            return (
+                                <li key={index} className={item.cName}>
+                                    <Link to={item.path}>
+                                        {item.icon}
+                                        <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            );
+                        })}
+
+                        <Break />
+                        {SidebarDataPart4.map((item, index) => {
+                            return (
+                                <li key={index} className={item.cName}>
+                                    <Link to={item.path}>
+                                        {item.icon}
+                                        <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </nav>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                    <Logo ></Logo>
                 </Link>
-            </div>
+                <VerticalBreak />
+                <Title>Boboba</Title>
+                <div>
+                    <AuthenticationButton />
+                </div>
+            </NavbarContainer>
 
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                <ul className='nav-menu-items' onClick={showSidebar}>
-                    
-                    {SidebarDataPart1.map((item, index) => {
-                    return (
-                        <li key={index} className={item.cName}>
-                        <Link to={item.path}>
-                            {item.icon}
-                            <span>{item.title}</span>
-                        </Link>
-                        </li>
-                    );
-                    })}
+        </Auth0Provider>
 
-                    <Break />
-                    {SidebarDataPart2.map((item, index) => {
-                    return (
-                        <li key={index} className={item.cName}>
-                        <Link to={item.path}>
-                            {item.icon}
-                            <span>{item.title}</span>
-                        </Link>
-                        </li>
-                    );
-                    })}
-
-                    <Break />
-                    {SidebarDataPart3.map((item, index) => {
-                    return (
-                        <li key={index} className={item.cName}>
-                        <Link to={item.path}>
-                            {item.icon}
-                            <span>{item.title}</span>
-                        </Link>
-                        </li>
-                    );
-                    })}
-
-                    <Break />
-                    {SidebarDataPart4.map((item, index) => {
-                    return (
-                        <li key={index} className={item.cName}>
-                        <Link to={item.path}>
-                            {item.icon}
-                            <span>{item.title}</span>
-                        </Link>
-                        </li>
-                    );
-                    })}
-                </ul>
-            </nav>    
-            <Link to='/'style={{ textDecoration: 'none' }}>
-                <Logo ></Logo>
-            </Link>
-            <VerticalBreak />
-            <Title>Boboba</Title>
-            <ButtonContainer>
-
-                <Link to='/SignIn' style={{ textDecoration: 'none' }}>
-                    <ButtonSignIn>
-                        Sign In
-                    </ButtonSignIn>
-                </Link>     
-
-                
-
-                {/* <Link to='/SignUp' style={{ textDecoration: 'none' }}>
-                    <ButtonMyAccount>
-                        MyAccount
-                    </ButtonMyAccount> 
-                </Link>  */}
-            </ButtonContainer>
-        </NavbarContainer>
-     
     )
 };
 
