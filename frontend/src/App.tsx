@@ -10,11 +10,11 @@ import BobaMap from './templetes/BobaMap'
 import ContactUs from './components/ContactUs'
 import Image from './components/image'
 // import styled from 'styled-components';
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import WhatsNew from './components/WhatsNew';
 import Trending from './components/Trending';
 
-function App() {
+export const App: React.FC = () => {
   return (
     
     <Routes>
@@ -31,5 +31,3 @@ function App() {
 
   );
 }
-
-export default App;
