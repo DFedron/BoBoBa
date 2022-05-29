@@ -13,9 +13,12 @@ import Image from './components/image'
 import { Route, Routes} from "react-router-dom";
 import WhatsNew from './components/WhatsNew';
 import Trending from './components/Trending';
+import Navbar from './components/Navbar';
 
 export const App: React.FC = () => {
   return (
+    <div className="page-layout">
+    <Navbar />
     
     <Routes>
       <Route path='/'   element={<Hellopage/>} />
@@ -28,6 +31,8 @@ export const App: React.FC = () => {
       <Route path="/whats-new" element={<WhatsNew />} />
       <Route path="/trending" element={<Trending />} />
     </Routes>
+
+    </div>
 
   );
 }
