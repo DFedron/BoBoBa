@@ -194,6 +194,5 @@ func main() {
 	//Start Server, set PORT to 8080
 	//127.0.0.1:8080 for DEV, change back to :8080 for prod
 	fmt.Println("Server Listening on PORT 8080...")
-	fmt.Println("Hi")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
