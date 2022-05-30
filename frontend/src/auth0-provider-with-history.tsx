@@ -1,16 +1,18 @@
 import { AppState, Auth0Provider } from "@auth0/auth0-react";
 import React, { PropsWithChildren } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEnv } from "./context/env.context";
 
 export const Auth0ProviderWithHistory = ({
   children,
 }: PropsWithChildren<any>): JSX.Element | null => {
-  const history = useNavigate();
-  const { domain, clientId, audience } = useEnv();
+  const navigate = useNavigate();
+
+  const domain: string | undefined = process.env.REACT_APP_AUTH0_DOMAIN;
+  const clientId: string | undefined = process.env.REACT_APP_AUTH0_CLIENT_ID;
+  const audience: string | undefined = process.env.REACT_APP_AUTH0_AUDIENCE;
 
   const onRedirectCallback = (appState: AppState) => {
-    history(appState?.returnTo || window.location.pathname);
+    navigate(appState?.returnTo || window.location.pathname);
   };
 
   if (!(domain && clientId && audience)) {
@@ -24,7 +26,7 @@ export const Auth0ProviderWithHistory = ({
       audience={audience}
       redirectUri={window.location.origin}
       //@ts-ignore
-      skipRedirectCallback={onRedirectCallback}
+      onRedirectCallback={onRedirectCallback}
     >
       {children}
     </Auth0Provider>

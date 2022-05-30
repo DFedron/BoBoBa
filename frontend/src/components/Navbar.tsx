@@ -5,8 +5,8 @@ import menu from '../images/menu.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarDataPart1, SidebarDataPart2, SidebarDataPart3, SidebarDataPart4 } from './SideMenuOptions';
-import { useAuth0 } from "@auth0/auth0-react";
 import { AuthenticationButton } from './buttons/authentication-button';
+import { NavBarTab } from "./navigation/nav-bar-tab";
 
 import '../styles/Navbar.css';
 
@@ -191,6 +191,10 @@ export const Navbar: React.FC = () => {
                 </Link>
             </div>
 
+            <div className="nav-bar__tabs">
+                <NavBarTab path="/profile" label="Profile" />
+            </div>
+
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
 
@@ -250,9 +254,7 @@ export const Navbar: React.FC = () => {
             <div className="nav-bar__buttons">
                 <AuthenticationButton />
             </div>
-
         </NavbarContainer>
-
     )
 };
 
