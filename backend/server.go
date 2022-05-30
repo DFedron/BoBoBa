@@ -206,14 +206,14 @@ func main() {
 		panic(err)
 	}
 
-	sqlStatement := `
-	CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  age INT,
-  first_name TEXT,
-  last_name TEXT,
-  email TEXT UNIQUE NOT NULL
-);`
+// 	sqlStatement := `
+// 	CREATE TABLE users (
+//   id SERIAL PRIMARY KEY,
+//   age INT,
+//   first_name TEXT,
+//   last_name TEXT,
+//   email TEXT UNIQUE NOT NULL
+// );`
 	_, err = db.Exec(sqlStatement)
 	if err != nil {
 		panic(err)
