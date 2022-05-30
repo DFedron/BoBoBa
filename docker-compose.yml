@@ -9,3 +9,13 @@ services:
       - .:/backend/app
     ports:
       - "8000:8000"
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: always
+    ports:
+        - "5432:5432"
+    environment:
+        - POSTGRES_DB=bobobadb
+        - POSTGRES_USER=boboba_user
+        - POSTGRES_PASSWORD=boboba_pass
