@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/lestrrat-go/jwx v1.2.2
+	github.com/lib/pq v1.10.6
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
 )
 

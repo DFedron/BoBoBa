@@ -14,15 +14,18 @@ import (
 	"github.com/lestrrat-go/jwx/jwk"
 	"github.com/lestrrat-go/jwx/jwt"
 
+	//postgres imports
+	"database/sql"
 	_ "github.com/lib/pq"
 )
 
+//postgres variables
 const (
-	host     = "localhost"
+	host     = "postgres"
 	port     = 5432
-	user     = "postgres"
-	password = "your-password"
-	dbname   = "calhounio_demo"
+	user     = "boboba_user"
+	password = "boboba_pass"
+	dbname   = "bobobadb"
 )
 
 var tpl *template.Template
@@ -188,6 +191,7 @@ func fetchTenantKeys() {
 
 //Go server application entry point
 func main() {
+	//postgres
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
 		"password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbname)
@@ -202,6 +206,20 @@ func main() {
 		panic(err)
 	}
 
+	sqlStatement := `
+	CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  age INT,
+  first_name TEXT,
+  last_name TEXT,
+  email TEXT UNIQUE NOT NULL
+);`
+	_, err = db.Exec(sqlStatement)
+	if err != nil {
+		panic(err)
+	}
+
+	//auth0
 	initConfig()
 	fetchTenantKeys()
 
@@ -236,4 +254,10 @@ func main() {
 	//127.0.0.1:8080 for DEV, change back to :8080 for prod
 	fmt.Println("Server Listening on PORT 8080...")
 	log.Fatal(server.ListenAndServe())
+}
+
+func CheckError(err error) {
+	if err != nil {
+		panic(err)
+	}
 }
