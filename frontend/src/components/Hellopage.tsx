@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import background from '../images/blur-restaurant-interior.jpeg';
 
@@ -6,6 +6,7 @@ import RecentImage from './RecentImage';
 import Popular from './Popular';
 import ButtomNavBar from './FooterNavBar';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Section = styled.section`
     background: url(${background}) no-repeat center center;
@@ -86,15 +87,15 @@ const Button = styled.div`
     }
 `;
 
+const Hellopage = () => {
+    const { isAuthenticated, user } = useAuth0();
 
+    if (isAuthenticated) {
+        console.log(user);
+    }
 
-
-
-
-const Hellopage = () =>
-{
-    return(
-        <div id = "Home">
+    return (
+        <div id="Home">
             <Section>
                 <ContentOne></ContentOne>
                 <ContentOne>
@@ -102,22 +103,22 @@ const Hellopage = () =>
                 </ContentOne>
                 <ContentTwo>
                     Find the best local bubble tea stores near you with one click of a button.
-                </ContentTwo>  
+                </ContentTwo>
                 <Button>
-                    <Link to='/boba-map' style={{ textDecoration: 'none', color: "#F3683C"}}>
-                            It's Boba Time!                 
+                    <Link to='/boba-map' style={{ textDecoration: 'none', color: "#F3683C" }}>
+                        It's Boba Time!
                     </Link>
-                </Button> 
-            
+                </Button>
+
 
             </Section>
-                <RecentImage/>
-                <Popular  />
-                <ButtomNavBar /> 
+            <RecentImage />
+            <Popular />
+            <ButtomNavBar />
         </div>
 
 
-         )
+    )
 };
 
 export default Hellopage;
