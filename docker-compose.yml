@@ -12,6 +12,8 @@ services:
   postgres:
     container_name: postgres
     image: postgres
+    volumes:
+      - bobobadb-volume:/home/node/app
     restart: always
     ports:
         - "5432:5432"
@@ -19,3 +21,6 @@ services:
         - POSTGRES_DB=bobobadb
         - POSTGRES_USER=boboba_user
         - POSTGRES_PASSWORD=boboba_pass
+volumes: 
+  bobobadb-volume:
+    

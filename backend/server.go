@@ -214,10 +214,10 @@ func main() {
 //   last_name TEXT,
 //   email TEXT UNIQUE NOT NULL
 // );`
-	_, err = db.Exec(sqlStatement)
-	if err != nil {
-		panic(err)
-	}
+// 	_, err = db.Exec(sqlStatement)
+// 	if err != nil {
+// 		panic(err)
+// 	}
 
 	//auth0
 	initConfig()
