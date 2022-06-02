@@ -1,7 +1,8 @@
-import React, { FunctionComponent, useState } from 'react'
+import { FunctionComponent } from 'react'
+// import React, {useState} from 'react'
 import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
-import Alert from './Alert';
-import AlertType from './AlertType';
+// import Alert from './Alert';
+// import AlertType from './AlertType';
 
 interface GoogleSignInComponentProps {
   loginSuccess: (response: GoogleLoginResponse | GoogleLoginResponseOffline) => void;
@@ -13,7 +14,7 @@ const responseGoogle = (response: GoogleLoginResponse | GoogleLoginResponseOffli
 
 export const GoogleSignInComponent: FunctionComponent<GoogleSignInComponentProps> = ({ loginSuccess }) => {
 
-  const [loginFailed, setLoginFailed] = useState<boolean>();
+  // const [loginFailed, setLoginFailed] = useState<boolean>();
 
   return (
     <div className="text-center mb-4">

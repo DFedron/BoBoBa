@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarDataPart1, SidebarDataPart2, SidebarDataPart3, SidebarDataPart4 } from './SideMenuOptions';
 import { AuthenticationButton } from './buttons/authentication-button';
-import { NavBarTab } from "./navigation/nav-bar-tab";
+// import { NavBarTab } from "./navigation/nav-bar-tab";
 
 import '../styles/Navbar.css';
 
@@ -64,30 +64,30 @@ const ButtonContainer = styled.div`
     padding: 0px 20px;
 
 `;
-const ButtonSignIn = styled.div`
-    display: flex;
-    padding-top: 12px;
-    width: 160px;
-    height: 59px;
-    cursor: pointer;
-    font-family: 'Inria Serif';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 43px;
+// const ButtonSignIn = styled.div`
+//     display: flex;
+//     padding-top: 12px;
+//     width: 160px;
+//     height: 59px;
+//     cursor: pointer;
+//     font-family: 'Inria Serif';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 43px;
 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    align-self: center;
-    letter-spacing: 0.06em;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     align-self: center;
+//     letter-spacing: 0.06em;
 
-    color: #F98078;
+//     color: #F98078;
 
-    &:hover{
-        color: rgba(253, 150, 143, 1);
-    }
-`;
+//     &:hover{
+//         color: rgba(253, 150, 143, 1);
+//     }
+// `;
 
 // const ButtonMyAccount = styled.div`
 
