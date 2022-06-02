@@ -43,6 +43,8 @@ export const SignupButton: React.FC = () => {
           screen_hint: "signup",
         })
       }
+
+      style={{ background: 'none', border: 'none'}}
     >
       <Button>
       Sign Up

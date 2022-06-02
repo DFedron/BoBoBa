@@ -39,6 +39,8 @@ export const LogoutButton: React.FC = () => {
           returnTo: window.location.origin,
         })
       }
+
+      style={{ background: 'none', border: 'none'}}
     >
       <Button>
       Log Out
