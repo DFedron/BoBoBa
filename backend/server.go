@@ -17,6 +17,8 @@ import (
 	//postgres imports
 	"database/sql"
 	_ "github.com/lib/pq"
+
+	"io/ioutil"
 )
 
 //postgres variables
@@ -189,6 +191,27 @@ func fetchTenantKeys() {
 	tenantKeys = set
 }
 
+var results []string
+
+// PostHandler converts post request body to string
+func PostHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "POST" {
+		body, err := ioutil.ReadAll(r.Body)
+		if err != nil {
+			http.Error(w, "Error reading request body",
+				http.StatusInternalServerError)
+		}
+
+		results = append(results, string(body))
+
+		fmt.Println("Results", results)
+
+		fmt.Fprint(w, "POST done")
+	} else {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+	}
+}
+
 //Go server application entry point
 func main() {
 	//postgres
@@ -243,16 +266,18 @@ func main() {
 	router.Handle("/api/messages/admin",
 		validateToken(hasPermission(http.HandlerFunc(adminApiHandler), "read:admin-messages")))
 
+	router.HandleFunc("/get_user", PostHandler)
+
 	routerWithCORS := handleCORS(router)
 
 	server := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":8000",
 		Handler: routerWithCORS,
 	}
 
 	//Start Server, set PORT to 8080
 	//127.0.0.1:8080 for DEV, change back to :8080 for prod
-	fmt.Println("Server Listening on PORT 8080...")
+	fmt.Println("Server Listening on PORT 8000...")
 	log.Fatal(server.ListenAndServe())
 }
 

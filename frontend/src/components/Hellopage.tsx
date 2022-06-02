@@ -90,8 +90,29 @@ const Button = styled.div`
 const Hellopage = () => {
     const { isAuthenticated, user } = useAuth0();
 
-    if (isAuthenticated) {
+    if (isAuthenticated && user) {
         console.log(user);
+
+        const data = {
+            name: user.nickname,
+            email: user.email,
+        }
+
+        fetch("http://localhost:8000/get_user", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            mode: 'no-cors',
+            method: "POST",
+            body: JSON.stringify(data)
+        }).then(response => response.json())
+            .then(result => {
+                console.log('Success:', result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
 
     return (
