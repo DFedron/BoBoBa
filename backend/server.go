@@ -227,7 +227,7 @@ func insertUser(userdata []byte) {
 	fmt.Println("userData", UserData)
 
 	//If userdata is not null
-	if (userDataStruct{} == UserData) {
+	if (userDataStruct{} != UserData) {
 
 		sqlStatement := `
 INSERT INTO users (nickname, email)
