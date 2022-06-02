@@ -286,13 +286,13 @@ func main() {
 	routerWithCORS := handleCORS(router)
 
 	server := &http.Server{
-		Addr:    ":8000",
+		Addr:    ":8080",
 		Handler: routerWithCORS,
 	}
 
 	//Start Server, set PORT to 8080
 	//127.0.0.1:8080 for DEV, change back to :8080 for prod
-	fmt.Println("Server Listening on PORT 8000...")
+	fmt.Println("Server Listening on PORT 8080...")
 	log.Fatal(server.ListenAndServe())
 }
 

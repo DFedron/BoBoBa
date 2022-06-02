@@ -98,7 +98,7 @@ const Hellopage = () => {
             email: user.email,
         }
 
-        fetch("http://localhost:8000/get_user", {
+        fetch("http://localhost:8080/get_user", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

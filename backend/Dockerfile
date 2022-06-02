@@ -8,7 +8,7 @@ ADD . /app
 
 WORKDIR /app
 
-EXPOSE 8000
+EXPOSE 8080
 
 RUN go build -o server.exe
 
