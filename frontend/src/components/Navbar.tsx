@@ -191,9 +191,9 @@ export const Navbar: React.FC = () => {
                 </Link>
             </div>
 
-            <div className="nav-bar__tabs">
+            {/* <div className="nav-bar__tabs">
                 <NavBarTab path="/profile" label="Profile" />
-            </div>
+            </div> */}
 
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
