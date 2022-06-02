@@ -203,12 +203,35 @@ func PostHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		results = append(results, string(body))
-
 		fmt.Println("Results", results)
+		insertUser(body)
 
 		fmt.Fprint(w, "POST done")
 	} else {
 		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+	}
+}
+
+var sqlDB *sql.DB
+
+type userDataStruct struct {
+	Name  string
+	Email string
+}
+
+func insertUser(userdata []byte) {
+	var err error
+	var UserData userDataStruct
+	json.Unmarshal([]byte(userdata), &UserData)
+
+	fmt.Println("userData", UserData)
+
+	sqlStatement := `
+INSERT INTO users (nickname, email)
+VALUES ($1, $2)`
+	_, err = sqlDB.Exec(sqlStatement, UserData.Name, UserData.Email)
+	if err != nil {
+		panic(err)
 	}
 }
 
@@ -219,6 +242,7 @@ func main() {
 		"password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbname)
 	db, err := sql.Open("postgres", psqlInfo)
+	sqlDB = db
 	if err != nil {
 		panic(err)
 	}
@@ -228,19 +252,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-// 	sqlStatement := `
-// 	CREATE TABLE users (
-//   id SERIAL PRIMARY KEY,
-//   age INT,
-//   first_name TEXT,
-//   last_name TEXT,
-//   email TEXT UNIQUE NOT NULL
-// );`
-// 	_, err = db.Exec(sqlStatement)
-// 	if err != nil {
-// 		panic(err)
-// 	}
 
 	//auth0
 	initConfig()
