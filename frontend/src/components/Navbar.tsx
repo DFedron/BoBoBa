@@ -251,9 +251,13 @@ export const Navbar: React.FC = () => {
             </Link>
             <VerticalBreak />
             <Title>Boboba</Title>
-            <div className="nav-bar__buttons">
-                <AuthenticationButton />
-            </div>
+            <ButtonContainer>
+                <div className="nav-bar__buttons">
+                   
+                        <AuthenticationButton />
+                    
+                </div>
+            </ButtonContainer>
         </NavbarContainer>
     )
 };
