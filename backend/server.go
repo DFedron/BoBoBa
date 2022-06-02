@@ -226,12 +226,16 @@ func insertUser(userdata []byte) {
 
 	fmt.Println("userData", UserData)
 
-	sqlStatement := `
+	//If userdata is not null
+	if (userDataStruct{} == UserData) {
+
+		sqlStatement := `
 INSERT INTO users (nickname, email)
 VALUES ($1, $2)`
-	_, err = sqlDB.Exec(sqlStatement, UserData.Name, UserData.Email)
-	if err != nil {
-		panic(err)
+		_, err = sqlDB.Exec(sqlStatement, UserData.Name, UserData.Email)
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 
