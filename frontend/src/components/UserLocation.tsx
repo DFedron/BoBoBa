@@ -30,11 +30,13 @@ export default function UserLocation({setAnchor}: AnchorProp) {
     
     return (
     <div className="App">
-        {/* <button id="location" onClick={getLocation}>Get Current Coords</button>
-        <h1>Coordinates</h1>
-        <p>{status}</p>
-        {lat && <p>Latitude: {lat}</p>}
-        {lng && <p>Longitude: {lng}</p>} */}
+      
+        {/* <button id="location" onClick={getLocation}>Get Current Coords</button> */}
+        
+        {/* <h1>Coordinates</h1> */}
+        {/* <p>{status}</p> */}
+        {/* {lat && <p>Latitude: {lat}</p>} */}
+        {/* {lng && <p>Longitude: {lng}</p>} */}
     </div>
     )
 }
