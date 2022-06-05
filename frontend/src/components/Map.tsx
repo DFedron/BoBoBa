@@ -31,7 +31,7 @@ export default function Map() {
         
     }), []);
     const onLoad = useCallback((map:any) => (mapRef.current = map), []);
-    const bobaStores = useMemo(() => findBobaStores(center), [center]);   //set anchor instead of center???
+    const bobaStores = useMemo(() => findBobaStores(center), [anchor]);   //set anchor instead of center???
 
     const [Page, setPages] = useState(1);
 
@@ -109,13 +109,13 @@ export default function Map() {
 
             <div className="StoreInfo-container">
                 <div className="StoreButtonsUp">
-                    <button className="Buttons" onClick={prevPage}>←</button>
+                    <button className="Buttons" onClick={prevPage}>&#8592;</button>
                     <button className="Buttons" onClick={() => updateStore(1)}>1</button>
                     <button className="Buttons" onClick={() => updateStore(2)}>2</button>
                     <button className="Buttons" onClick={() => updateStore(3)}>3</button>
                     <button className="Buttons" onClick={() => updateStore(4)}>4</button>
                     <button className="Buttons" onClick={() => updateStore(5)}>5</button>
-                    <button className="Buttons" onClick={nextPage}>→</button>
+                    <button className="Buttons" onClick={nextPage}>&#8594;</button>
                 </div>
                 <div className="Stores">
                     
@@ -135,7 +135,7 @@ export default function Map() {
 
                                 <div className="StorePic"> 
                                     {/* {showItem.photos[0].getUrl({maxWidth: 35, maxHeight: 35})} */}
-                                    <img alt="" src="../images/Boba.png" />
+                                    {/* <img alt="" src="../images/Boba.png" /> */}
                                 </div>
                           
                           
@@ -147,13 +147,13 @@ export default function Map() {
                 </div>
 
                 <div className="StoreButtonsDown">
-                    <button className="Buttons" onClick={prevPage}>←</button>
+                    <button className="Buttons" onClick={prevPage}>&#8592;</button>
                     <button className="Buttons" onClick={() => updateStore(1)}>1</button>
                     <button className="Buttons" onClick={() => updateStore(2)}>2</button>
                     <button className="Buttons" onClick={() => updateStore(3)}>3</button>
                     <button className="Buttons" onClick={() => updateStore(4)}>4</button>
                     <button className="Buttons" onClick={() => updateStore(5)}>5</button>
-                    <button className="Buttons" onClick={nextPage}>→</button>
+                    <button className="Buttons" onClick={nextPage}>&#8594;</button>
                 </div>
 
             </div>
