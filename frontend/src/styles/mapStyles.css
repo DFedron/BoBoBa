@@ -67,6 +67,7 @@
 }
 
 .StoreName{
+    font-weight: bold;
     text-align: center;
     align-self: center;
     justify-content: center;
@@ -78,7 +79,9 @@
     color: #1a83ff;
 }
 
+
 .StorePic{
+    margin-top: 10px;
     background:url('../images/Boba.png') no-repeat center center
 }
 
