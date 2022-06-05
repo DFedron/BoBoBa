@@ -19,6 +19,7 @@ export default function UserLocation({setAnchor}: AnchorProp) {
             setStatus('Locating...');
             navigator.geolocation.getCurrentPosition((position) => {
                 setStatus(null);
+                console.log(status);
                 setLat(position.coords.latitude);
                 setLng(position.coords.longitude);
                 setAnchor({lat, lng});

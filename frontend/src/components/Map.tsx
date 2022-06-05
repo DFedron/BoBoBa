@@ -31,7 +31,7 @@ export default function Map() {
         
     }), []);
     const onLoad = useCallback((map:any) => (mapRef.current = map), []);
-    const bobaStores = useMemo(() => findBobaStores(center), [anchor]);   //set anchor instead of center???
+    const bobaStores = useMemo(() => findBobaStores(center), [center]);   //set anchor instead of center???
 
     const [Page, setPages] = useState(1);
 
