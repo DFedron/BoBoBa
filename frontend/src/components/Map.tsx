@@ -8,11 +8,16 @@ import {
 } from "@react-google-maps/api";
 import '../styles/mapStyles.css';
 import UserLocation from "./UserLocation";
+
 // import Distance from "./distance"
 
 type LatLngLiteral = google.maps.LatLngLiteral;
 // type DirectionsResult = google.maps.DirectionsResult;
 type MapOptions = google.maps.MapOptions;
+
+const Stores : Array<any> = [];
+const Place : Array<any> = [];
+
 
 export default function Map() {
     const [anchor, setAnchor] = useState<LatLngLiteral>();
@@ -28,10 +33,31 @@ export default function Map() {
     const onLoad = useCallback((map:any) => (mapRef.current = map), []);
     const bobaStores = useMemo(() => findBobaStores(center), [center]);   //set anchor instead of center???
 
+    const [Page, setPages] = useState(1);
+
+    function updateStore(num: number){
+        setPages(prevPage => num)
+    }
+
+    function nextPage(){
+        if(Page < 5){
+            setPages(prevPage => prevPage + 1 )
+        }
+    }
+
+    function prevPage(){
+        if(Page > 1){
+            setPages(prevPage => prevPage - 1 )
+        }
+            
+    }
+
+
+
     return(
-        <div className="container">
-            <div className="controls">
-                <h1>User Geolocation Info</h1>
+        <>
+        <div className="controls">
+                {/* <h1>User Geolocation Info</h1> */}
                 <UserLocation 
                     setAnchor={(position) => {
                         setAnchor(position);
@@ -39,6 +65,8 @@ export default function Map() {
                     }}
                 />
             </div>
+        <div className="container">
+            
             <div className="map">
                 <GoogleMap 
                     zoom={12} 
@@ -78,7 +106,59 @@ export default function Map() {
                     )}
                 </GoogleMap>
             </div>
+
+            <div className="StoreInfo-container">
+                <div className="StoreButtonsUp">
+                    <button className="Buttons" onClick={prevPage}>←</button>
+                    <button className="Buttons" onClick={() => updateStore(1)}>1</button>
+                    <button className="Buttons" onClick={() => updateStore(2)}>2</button>
+                    <button className="Buttons" onClick={() => updateStore(3)}>3</button>
+                    <button className="Buttons" onClick={() => updateStore(4)}>4</button>
+                    <button className="Buttons" onClick={() => updateStore(5)}>5</button>
+                    <button className="Buttons" onClick={nextPage}>→</button>
+                </div>
+                <div className="Stores">
+                    
+                    {Stores.filter((item, index) => (index < Page*4) && index >= (Page-1)*4).map((showItem, index) =>{
+                        getPic();
+
+                        return (
+                            <div className="StoreSection">
+                            
+                                <div className="StoreName"> 
+                                    {showItem.name}
+                                </div>
+
+                                <div className="StoreSecInfo"> 
+                                    rating: {showItem.rating}
+                                </div>
+
+                                <div className="StorePic"> 
+                                    {/* {showItem.photos[0].getUrl({maxWidth: 35, maxHeight: 35})} */}
+                                    <img alt="" src="../images/Boba.png" />
+                                </div>
+                          
+                          
+                            </div>
+                        );
+                    })}
+                    
+                    
+                </div>
+
+                <div className="StoreButtonsDown">
+                    <button className="Buttons" onClick={prevPage}>←</button>
+                    <button className="Buttons" onClick={() => updateStore(1)}>1</button>
+                    <button className="Buttons" onClick={() => updateStore(2)}>2</button>
+                    <button className="Buttons" onClick={() => updateStore(3)}>3</button>
+                    <button className="Buttons" onClick={() => updateStore(4)}>4</button>
+                    <button className="Buttons" onClick={() => updateStore(5)}>5</button>
+                    <button className="Buttons" onClick={nextPage}>→</button>
+                </div>
+
+            </div>
         </div>
+    </>
     )
 }
 
@@ -134,9 +214,14 @@ const findBobaStores = ((position: LatLngLiteral) => {
                 //and passback to create markers on each coordinate tuple?
                 if(results[i].business_status === "OPERATIONAL"){
                     console.log(results[i])
-                    _bobaStores.push(results[i].geometry.location)
+                    _bobaStores.push(results[i])
+                    Stores.push(results[i])
+                    Place.push(results[i].place_id)
                 }
+               
             }
+             
+     
         }
     }
 
@@ -149,5 +234,27 @@ const findBobaStores = ((position: LatLngLiteral) => {
     //     })
     // }
 
+    
+
     return _bobaStores;
 });
+
+const getPic = () => {
+    let service = new google.maps.places.PlacesService(document.createElement('div'));
+                        
+    let request = {
+        placeId: 'ChIJ10KlwAdzXg0RsH56kZsfcHs'
+    };
+
+    service.getDetails(request, callback);
+
+    function callback(results:any, status:any) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (let i = 0; i < results.length; i++) {
+                console.log("Place !!!" + results[i]);
+            }
+            
+            
+        }
+    }
+}
