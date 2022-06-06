@@ -8,7 +8,7 @@ import {
 } from "@react-google-maps/api";
 import '../styles/mapStyles.css';
 import UserLocation from "./UserLocation";
-
+import ButtomNavBar from './FooterNavBar';
 // import Distance from "./distance"
 
 type LatLngLiteral = google.maps.LatLngLiteral;
@@ -16,16 +16,18 @@ type LatLngLiteral = google.maps.LatLngLiteral;
 type MapOptions = google.maps.MapOptions;
 
 const Stores : Array<any> = [];
-const Place : Array<any> = [];
+const Photo : Array<any> = [];
 
 
 export default function Map() {
+    const APIKEY = "AIzaSyDeZe5B-4s_wV_BIMfC50edmg6FtqXdBpo";
     const [anchor, setAnchor] = useState<LatLngLiteral>();
     const mapRef = useRef<GoogleMap>();
     const center = useMemo<LatLngLiteral>(() => ({lat: 45.5, lng: -122.67 }), []);
     const options = useMemo<MapOptions>(() => ({
         mapId: "c22bb338ab1586ba",  //light-mode
         // mapId: "b11682a15259dc5f",     //dark-mode
+        // mapId: "a2ffba92f8676497",
         disableDefaultUI: true, //hides map type option
         clickableIcons: false   //hides clickable markers
         
@@ -120,7 +122,9 @@ export default function Map() {
                 <div className="Stores">
                     
                     {Stores.filter((item, index) => (index < Page*4) && index >= (Page-1)*4).map((showItem, index) =>{
-                        getPic();
+       
+                        var imgSrc = showItem.photos[0].getUrl({maxWidth: 400, maxHeight: 400});
+             
 
                         return (
                             <div className="StoreSection">
@@ -130,15 +134,19 @@ export default function Map() {
                                 </div>
 
                                 <div className="StoreSecInfo"> 
-                                    rating: {showItem.rating}
+                                    <div>rating: {showItem.rating}</div>
+                                    <div>
+                                        Review:&nbsp;
+                                        {showItem.user_ratings_total}
+                                    </div>
                                 </div>
 
                                 <div className="StorePic"> 
-                                    {/* {showItem.photos[0].getUrl({maxWidth: 35, maxHeight: 35})} */}
-                                    {/* <img alt="" src="../images/Boba.png" /> */}
+                             
+                                    <img className="BobaPic" src={imgSrc} alt=""/>
                                 </div>
                           
-                          
+                 
                             </div>
                         );
                     })}
@@ -158,6 +166,7 @@ export default function Map() {
 
             </div>
         </div>
+        <ButtomNavBar />
     </>
     )
 }
@@ -214,9 +223,9 @@ const findBobaStores = ((position: LatLngLiteral) => {
                 //and passback to create markers on each coordinate tuple?
                 if(results[i].business_status === "OPERATIONAL"){
                     console.log(results[i])
-                    _bobaStores.push(results[i])
+                    _bobaStores.push(results[i].geometry.location)
                     Stores.push(results[i])
-                    Place.push(results[i].place_id)
+                    Photo.push(results[i].photos[0].getUrl())
                 }
                
             }

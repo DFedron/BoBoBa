@@ -11,8 +11,10 @@ export default function UserLocation({setAnchor}: AnchorProp) {
 
     useEffect(() => {
         getLocation();
-    })
-    const getLocation = () => {
+    });
+
+    
+    function getLocation(){
         if(!navigator.geolocation){
             setStatus('Geolocation is not supported by your browser');
         } else {
@@ -33,9 +35,10 @@ export default function UserLocation({setAnchor}: AnchorProp) {
     <div className="App">
       
         {/* <button id="location" onClick={getLocation}>Get Current Coords</button> */}
+        {/* <div>{getLocation()}</div> */}
         
         {/* <h1>Coordinates</h1> */}
-        {/* <p>{status}</p> */}
+        {/* <span>{status}</span> */}
         {/* {lat && <p>Latitude: {lat}</p>} */}
         {/* {lng && <p>Longitude: {lng}</p>} */}
     </div>
