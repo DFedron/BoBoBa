@@ -17,6 +17,7 @@ import Navbar from './components/Navbar';
 import { NotFound } from "./components/NotFound";
 import { Profile } from "./pages/profile";
 import { ProtectedRoute } from "./components/protected-route";
+import QA from './components/QA';
 
 export const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ export const App: React.FC = () => {
           <Route path="/image" element={<Image />} />
           <Route path="/whats-new" element={<WhatsNew />} />
           <Route path="/trending" element={<Trending />} />
+          <Route path="/QA" element={<QA />} />
           <Route path="*" element={<NotFound />} />
           <Route
             path="/profile"

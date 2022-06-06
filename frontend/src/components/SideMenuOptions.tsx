@@ -153,7 +153,7 @@ export const SidebarDataPart1 = [
     
     {
       title: 'Q&A',
-      path: '/TestPage',
+      path: '/QA',
       icon: <QA />,
       cName: 'nav-text'
     }
