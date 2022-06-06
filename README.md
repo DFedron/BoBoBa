@@ -28,16 +28,19 @@ Now, you should be all set up to start developing!
 
 We'll be using Docker Containers. The frontend will be in React app.
 
-To get the backend server up and running, first you'll need to `cd` into the "backend" folder. 
-Then run the following:
+From root directory of Boboba, run the following command:
 
 ```
-> docker build -t boboba .
-
-> docker run -p 8080:8080 boboba
+> docker compose up
 ```
 
-The default localhost port is set to `localhost:8080` so go ahead and head over there right [here](http://localhost:8080). 
+Then, go ahead and `cd` into the frontend folder and run:
+```
+> npm install
+> npm start
+```
+
+The default localhost port is set to `localhost:3000` so go ahead and head over there right [here](http://localhost:3000). 
 
 Once there, open up the developer console to view requests and responses. For WINDOWS `Ctrl Shift J` or MAC `Ctrl Option J`. Select the <u>Network</u> table and see your requests by <u>Name</u> and <u>Status</u>.
 
