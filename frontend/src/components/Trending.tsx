@@ -4,6 +4,15 @@ import styled from 'styled-components';
 import boba from '../images/Boba.png';
 import star from '../images/Star.png';
 
+import boba2 from '../images/boba2.png';
+
+
+import boba5 from '../images/boba5.png';
+import boba6 from '../images/boba6.png';
+import boba7 from '../images/boba7.png';
+
+
+
 const Section = styled.div`
     // z-index: -1;
     padding-top: 125px;
@@ -224,13 +233,13 @@ function Trending() {
             <ContentSection>
                 <Wrapper>
                     <Title>Top Stores</Title>
-                    <Boba />
+                    <Boba style={{backgroundImage: `url(${boba2})`}}/>
                     <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
-                    <Boba />
+                    <Boba style={{backgroundImage: `url(${boba5})`}}/>
                     <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
-                    <Boba />
+                    <Boba style={{backgroundImage: `url(${boba7})`}}/>
                     <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
-                    <Boba />
+                    <Boba style={{backgroundImage: `url(${boba6})`}}/>
                     <p style={{justifyContent: 'center', display: 'flex', fontWeight: '600'}}>Store1 <Star /></p>
                 </Wrapper>
                 <Wrapper>

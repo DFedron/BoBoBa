@@ -1,6 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
 import boba from '../images/Boba.png'
+import boba13 from '../images/boba13.png';
+import boba12 from '../images/boba12.png';
+import boba10 from '../images/boba10.png';
+import boba9 from '../images/boba9.png';
+import boba11 from '../images/boba11.png';
+import boba4 from '../images/boba4.png';
+import boba3 from '../images/boba3.png';
 
 const Section = styled.div`
   width: 100%;
@@ -67,15 +74,15 @@ const RecentImage = () => {
     <Section>
       <SectionOne>
         <Title>Recent Images</Title>
-        <Boba />
-        <Boba />
+        <Boba style={{backgroundImage: `url(${boba13})`}}/>
+        <Boba style={{backgroundImage: `url(${boba12})`}}/>
       </SectionOne>
       <SectionOne>
-      <BobaOne />
-      <BobaOne />
-      <BobaOne />
-      <BobaOne />
-      <BobaOne />
+      <BobaOne style={{backgroundImage: `url(${boba10})`}}/>
+      <BobaOne style={{backgroundImage: `url(${boba9})`}}/>
+      <BobaOne style={{backgroundImage: `url(${boba11})`}}/>
+      <BobaOne style={{backgroundImage: `url(${boba3})`}}/>
+      <BobaOne style={{backgroundImage: `url(${boba4})`}}/>
       </SectionOne>
     </Section>
   )

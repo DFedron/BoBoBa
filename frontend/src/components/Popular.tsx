@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import boba from '../images/Boba.png'
+import boba8 from '../images/boba8.png'
 import love from '../images/love.png'
 
 const Section = styled.div`
@@ -58,7 +58,7 @@ const LogoWrapper = styled.div`
   color: #000000;
 `;
 const Boba = styled.div`    
-    background: url(${boba}) no-repeat;
+    background: url(${boba8}) no-repeat;
     width: 400px;
     height: 500px;
 

@@ -2,6 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 import ButtomNavBar from './FooterNavBar'
 import boba from '../images/Boba.png';
+import boba1 from '../images/boba1.png';
+import boba3 from '../images/boba3.png';
+import boba4 from '../images/boba4.png';
+import boba6 from '../images/boba6.png';
+import boba8 from '../images/boba8.png';
+
 const Section = styled.div`
     z-index: -1;
     padding-top: 125px;
@@ -167,16 +173,16 @@ function Image() {
             
             <SectionTwo>
                 <TextTopPost>Top posts</TextTopPost>
-                <Boba />
-                <Boba />
-                <Boba />               
+                <Boba style={{backgroundImage: `url(${boba1})`}}/>
+                <Boba style={{backgroundImage: `url(${boba3})`}}/>
+                <Boba style={{backgroundImage: `url(${boba4})`}}/>               
                 
             </SectionTwo>
             <SectionTwo>
                 <TextMostRecent>Most Recent</TextMostRecent>
-                <Boba />
-                <Boba />
-                <Boba />
+                <Boba style={{backgroundImage: `url(${boba6})`}}/>
+                <Boba style={{backgroundImage: `url(${boba8})`}}/>
+                <Boba/>
             </SectionTwo>
         </Section>
         <ButtomNavBar /> 
