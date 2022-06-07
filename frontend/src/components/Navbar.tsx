@@ -64,60 +64,7 @@ const ButtonContainer = styled.div`
     padding: 0px 20px;
 
 `;
-// const ButtonSignIn = styled.div`
-//     display: flex;
-//     padding-top: 12px;
-//     width: 160px;
-//     height: 59px;
-//     cursor: pointer;
-//     font-family: 'Inria Serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 36px;
-//     line-height: 43px;
 
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     align-self: center;
-//     letter-spacing: 0.06em;
-
-//     color: #F98078;
-
-//     &:hover{
-//         color: rgba(253, 150, 143, 1);
-//     }
-// `;
-
-// const ButtonMyAccount = styled.div`
-
-//     display: flex;
-//     width: 233px;
-//     height: 60px;
-//     cursor: pointer;
-
-//     font-family: 'Inria Serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 36px;
-//     line-height: 43px;
-
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     align-self: center;
-//     letter-spacing: 0.06em;
-
-//     color: #FFFFFF;
-
-//     mix-blend-mode: normal;
-
-//     background: #F98078;
-//     mix-blend-mode: multiply;
-//     opacity: 0.6;
-//     box-shadow: 6px 7px 6px 2px rgba(0, 0, 0, 0.5);
-//     border-radius: 35px;
-// `;
 
 const Title = styled.div`
 
@@ -160,26 +107,7 @@ export const Navbar: React.FC = () => {
 
     const showSidebar = () => {
         setSidebar(!sidebar);
-        // if(sidebar === false){
-        //     if (typeof window != 'undefined' && window.document) {
-        //         document.body.style.overflow = 'hidden';
-        //         // let elem = document.getElementById("Home");
-        //         // console.log(elem);
 
-        //         // if(elem){
-
-        //         //     elem.style.cssText = styles;
-
-        //         // }
-        //     }
-        // }
-        // else{
-        //     document.body.style.overflow = 'unset';
-        //     // let elem = document.getElementById("Home");
-        //     // if(elem){
-        //     //     elem.style.opacity = "1";
-        //     // }
-        // }
 
     }
     return (
@@ -212,7 +140,6 @@ export const Navbar: React.FC = () => {
                     <Break />
 
 
-                    <Break />
                     {SidebarDataPart3.map((item, index) => {
                         return (
                             <li key={index} className={item.cName}>

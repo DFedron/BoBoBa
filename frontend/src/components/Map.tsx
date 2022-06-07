@@ -9,7 +9,7 @@ import {
 import '../styles/mapStyles.css';
 import UserLocation from "./UserLocation";
 import ButtomNavBar from './FooterNavBar';
-// import Distance from "./distance"
+
 
 type LatLngLiteral = google.maps.LatLngLiteral;
 // type DirectionsResult = google.maps.DirectionsResult;
@@ -111,14 +111,16 @@ export default function Map() {
             </div>
 
             <div className="StoreInfo-container">
-                <div className="StoreButtonsUp">
-                    <button className="Buttons" onClick={prevPage}>&#8592;</button>
-                    <button className="Buttons" onClick={() => updateStore(1)}>1</button>
-                    <button className="Buttons" onClick={() => updateStore(2)}>2</button>
-                    <button className="Buttons" onClick={() => updateStore(3)}>3</button>
-                    <button className="Buttons" onClick={() => updateStore(4)}>4</button>
-                    <button className="Buttons" onClick={() => updateStore(5)}>5</button>
-                    <button className="Buttons" onClick={nextPage}>&#8594;</button>
+                <div>
+                    <div className="StoreButtonsUp">
+                        <button className="Buttons" onClick={prevPage}>&#8592;</button>
+                        <button className="Buttons" onClick={() => updateStore(1)}>1</button>
+                        <button className="Buttons" onClick={() => updateStore(2)}>2</button>
+                        <button className="Buttons" onClick={() => updateStore(3)}>3</button>
+                        <button className="Buttons" onClick={() => updateStore(4)}>4</button>
+                        <button className="Buttons" onClick={() => updateStore(5)}>5</button>
+                        <button className="Buttons" onClick={nextPage}>&#8594;</button>
+                    </div>
                 </div>
                 <div className="Stores">
                     
@@ -165,17 +167,17 @@ export default function Map() {
                     
                     
                 </div>
-
-                <div className="StoreButtonsDown">
-                    <button className="Buttons" onClick={prevPage}>&#8592;</button>
-                    <button className="Buttons" onClick={() => updateStore(1)}>1</button>
-                    <button className="Buttons" onClick={() => updateStore(2)}>2</button>
-                    <button className="Buttons" onClick={() => updateStore(3)}>3</button>
-                    <button className="Buttons" onClick={() => updateStore(4)}>4</button>
-                    <button className="Buttons" onClick={() => updateStore(5)}>5</button>
-                    <button className="Buttons" onClick={nextPage}>&#8594;</button>
+                <div>
+                    <div className="StoreButtonsDown">
+                        <button className="Buttons" onClick={prevPage}>&#8592;</button>
+                        <button className="Buttons" onClick={() => updateStore(1)}>1</button>
+                        <button className="Buttons" onClick={() => updateStore(2)}>2</button>
+                        <button className="Buttons" onClick={() => updateStore(3)}>3</button>
+                        <button className="Buttons" onClick={() => updateStore(4)}>4</button>
+                        <button className="Buttons" onClick={() => updateStore(5)}>5</button>
+                        <button className="Buttons" onClick={nextPage}>&#8594;</button>
+                    </div>
                 </div>
-
             </div>
         </div>
         <ButtomNavBar />

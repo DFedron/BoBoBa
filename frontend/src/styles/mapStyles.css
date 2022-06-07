@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 150px;
+    /* height: 800px; */
 }
 
 
@@ -15,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 1200px;
 }
 
 .map-container {
@@ -24,15 +25,15 @@
     justify-content: center;
     /* margin: 100px; */
     width: 75%;
-    height: 100vh;
+    height: 1200px;
 }
 
 .StoreInfo-container{
 
     /* width: 50%; */
-    height: 100vh;
+    height: 1250px;
     display: grid;
-    grid-template-rows: 5vh 90vh 15vh;
+    grid-template-rows: 50px 1150px 50px;
     margin-left: 30px;
     margin-right: 30px;
 
