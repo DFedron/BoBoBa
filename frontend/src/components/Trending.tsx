@@ -224,7 +224,7 @@ function Trending() {
         <Section>
             <TextWrapper>
                 <TextImage>
-                    Trandings
+                    Trending
                 </TextImage>
                 <VerticalBreak />
                 <Break />

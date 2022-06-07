@@ -189,9 +189,6 @@ function ButtomNavBar() {
                   <Link to='/TestPage' style={{ textDecoration: 'none' }}>
                     <Text>Privacy</Text>
                   </Link>
-                  <Link to='/TestPage' style={{ textDecoration: 'none' }}>
-                    <Text>cooking Policy</Text>
-                  </Link>
 
               </Column>
 

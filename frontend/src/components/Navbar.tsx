@@ -4,7 +4,7 @@ import tapioca from '../images/tapioca.png'
 import menu from '../images/menu.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarDataPart1, SidebarDataPart2, SidebarDataPart3, SidebarDataPart4 } from './SideMenuOptions';
+import { SidebarDataPart1, SidebarDataPart3, SidebarDataPart4 } from './SideMenuOptions';
 import { AuthenticationButton } from './buttons/authentication-button';
 // import { NavBarTab } from "./navigation/nav-bar-tab";
 
@@ -210,16 +210,7 @@ export const Navbar: React.FC = () => {
                     })}
 
                     <Break />
-                    {SidebarDataPart2.map((item, index) => {
-                        return (
-                            <li key={index} className={item.cName}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
-                                </Link>
-                            </li>
-                        );
-                    })}
+
 
                     <Break />
                     {SidebarDataPart3.map((item, index) => {
