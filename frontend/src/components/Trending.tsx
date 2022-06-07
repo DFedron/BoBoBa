@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import boba from '../images/Boba.png';
 import star from '../images/Star.png';
 
-import boba2 from '../images/boba2.png';
+import boba2 from '../images/boba11.png';
 
 
-import boba5 from '../images/boba5.png';
+import boba5 from '../images/boba7.png';
 import boba6 from '../images/boba6.png';
-import boba7 from '../images/boba7.png';
+import boba7 from '../images/boba12.png';
 
 
 
