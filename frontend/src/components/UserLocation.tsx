@@ -27,6 +27,7 @@ export default function UserLocation({setAnchor}: AnchorProp) {
                 setAnchor({lat, lng});
             }, () => {
                 setStatus('Unable to retrieve your location');
+                console.log(status)
             });
         }
     }
