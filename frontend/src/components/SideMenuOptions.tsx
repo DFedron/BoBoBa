@@ -6,9 +6,9 @@ import map from "../images/map.png"
 
 import New from "../images/new.png"
 import qa from "../images/qa.png"
-import signIn from "../images/sign-in.png"
+// import signIn from "../images/sign-in.png"
 import trending from "../images/trending.png"
-import user from "../images/user.png"
+// import user from "../images/user.png"
 import styled from 'styled-components';
 
 const Home = styled.div`    
@@ -59,14 +59,14 @@ const QA = styled.div`
     background-size:cover;
 
 `;
-const SignIn = styled.div`    
-    background: url(${signIn}) no-repeat;
-    width: 23px;
-    height: 23px;
-    background attachment fixed;
-    background-size:cover;
+// const SignIn = styled.div`    
+//     background: url(${signIn}) no-repeat;
+//     width: 23px;
+//     height: 23px;
+//     background attachment fixed;
+//     background-size:cover;
 
-`;
+// `;
 const Trending = styled.div`    
     background: url(${trending}) no-repeat;
     width: 23px;
@@ -75,14 +75,14 @@ const Trending = styled.div`
     background-size:cover;
 
 `;
-const Users = styled.div`    
-    background: url(${user}) no-repeat;
-    width: 23px;
-    height: 23px;
-    background attachment fixed;
-    background-size:cover;
+// const Users = styled.div`    
+//     background: url(${user}) no-repeat;
+//     width: 23px;
+//     height: 23px;
+//     background attachment fixed;
+//     background-size:cover;
 
-`;
+// `;
 
 
 export const SidebarDataPart1 = [
