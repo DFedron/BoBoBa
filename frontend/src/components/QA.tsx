@@ -4,25 +4,6 @@ import styled from 'styled-components';
 
 import problem from '../images/problem.png'
 
-const Content = styled.div`
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    align-self: center;
-    font-family: 'HanziPen TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 128px;
-    line-height: 179px;
-
-    // position: absolute;
-    // top: 125px;
-    // left: 200px;
-    letter-spacing: 0.1em;n
-    padding: 350px 30px;
-    color: #F06C98;
-`;
-
 
 const Section = styled.div`
     margin: 0px;

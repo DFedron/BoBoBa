@@ -20,7 +20,7 @@ const Photo : Array<any> = [];
 
 
 export default function Map() {
-    const APIKEY = "AIzaSyDeZe5B-4s_wV_BIMfC50edmg6FtqXdBpo";
+
     const [anchor, setAnchor] = useState<LatLngLiteral>();
     const mapRef = useRef<GoogleMap>();
     const center = useMemo<LatLngLiteral>(() => ({lat: 45.5, lng: -122.67 }), []);
@@ -248,22 +248,4 @@ const findBobaStores = ((position: LatLngLiteral) => {
     return _bobaStores;
 });
 
-const getPic = () => {
-    let service = new google.maps.places.PlacesService(document.createElement('div'));
-                        
-    let request = {
-        placeId: 'ChIJ10KlwAdzXg0RsH56kZsfcHs'
-    };
 
-    service.getDetails(request, callback);
-
-    function callback(results:any, status:any) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (let i = 0; i < results.length; i++) {
-                console.log("Place !!!" + results[i]);
-            }
-            
-            
-        }
-    }
-}
