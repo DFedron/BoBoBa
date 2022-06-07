@@ -23,7 +23,7 @@ const Content = styled.div`
 function TestPage() {
   return (
     <div className='Testpage'>
-            <Content>Boba Map!!!!!!!!</Content>
+            <Content>Boba Maintaining!!!!</Content>
             <ButtomNavBar></ButtomNavBar>
     </div>
 
