@@ -16,6 +16,7 @@ type LatLngLiteral = google.maps.LatLngLiteral;
 type MapOptions = google.maps.MapOptions;
 
 const Stores : Array<any> = [];
+
 const Photo : Array<any> = [];
 
 
@@ -121,7 +122,18 @@ export default function Map() {
                 </div>
                 <div className="Stores">
                     
-                    {Stores.filter((item, index) => (index < Page*4) && index >= (Page-1)*4).map((showItem, index) =>{
+                    {Stores.sort((a, b) => {
+                         if(a.rating < b.rating)
+                          return 1; 
+                        if(a.rating > b.rating)
+                          return -1;
+                        return 0;
+                        }).filter((value, index, self) =>
+                            index === self.findIndex((t) => (
+                            t.reference === value.reference 
+                            ))
+
+                        ).filter((item, index) => (index < Page*4) && index >= (Page-1)*4).map((showItem, index) =>{
        
                         var imgSrc = showItem.photos[0].getUrl({maxWidth: 400, maxHeight: 400});
              
