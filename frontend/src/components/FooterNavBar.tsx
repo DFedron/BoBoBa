@@ -12,24 +12,45 @@ import trending from "../images/trending.png"
 
 import {Link} from 'react-router-dom'
 const Section = styled.div`
-  
-  // width: 100%;
+
+
   background: rgba(253, 150, 143, 0.2);
-  padding: 80px 60px;
+
+
   // background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112,71,247,1) 100%);
-  @media (max-width: 1000px) {
-    padding: 70px 30px;
-  }
+
 
 `;
+
+
+const LogoWrapper = styled.div`    
+
+  width: 264px;
+  height: 264px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+`;
+
+
+
+
 
 const Logo = styled.div`    
     background: url(${logo}) no-repeat;
     width: 264px;
     height: 264px;
     align-self: center;
-    margin-top: 30px;
+
+    // margin-top: 30px;
     background-size:cover;
+    @media (max-width: 1440px) {
+      width: 164px;
+      height: 164px;
+ 
+    }
 
 `;
 
@@ -47,16 +68,19 @@ const Column = styled.div`
   flex-direction: column;
   text-align: left;
   margin-left: 60px;
+
+  
 `;
 
 const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(280px, 1fr));
+
   // grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  // @media (max-width: 1000px) {
-  //   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  // }
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
 `;
 
 const Text = styled.a`
@@ -79,6 +103,11 @@ const Text = styled.a`
       color: #999;
       transition: 200ms ease-in;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 
 const Title = styled.p`
@@ -96,6 +125,11 @@ const Title = styled.p`
 
   margin-bottom: 30px;
   // font-weight: bold;
+
+  @media (max-width: 1440px) {
+    font-size: 25px;
+    line-height: 25px;
+  }
 `;
 
 
@@ -157,8 +191,10 @@ function ButtomNavBar() {
 
             <Wrapper>
             <Row>
-              <Column>
-                <Logo></Logo>
+              <Column  style={{ justifyContent: 'center' }}>
+                
+                  <Logo></Logo>
+                
               </Column>
 
               <Column>

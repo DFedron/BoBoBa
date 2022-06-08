@@ -34,6 +34,13 @@ const Logo = styled.div`
     cursor: pointer;
     background-size:cover;
 
+    @media (max-width: 1440px) {
+        margin: 30px 10px;
+        width: 90px;
+        height: 80px;
+
+      }
+
 `;
 
 
@@ -53,6 +60,13 @@ const Menu = styled.div`
         background-color: rgba(253, 150, 143, 0.4);
     }
 
+    @media (max-width: 1440px) {
+        margin-top: 40px;
+        margin-left: 25px;
+        width: 60px;
+        height: 60px;
+
+      }
 `;
 const ButtonContainer = styled.div`
     display: flex;
@@ -84,6 +98,12 @@ const Title = styled.div`
     letter-spacing: 0.06em;
 
     color: #F98078;
+
+    @media (max-width: 1440px) {
+        width: 200px;
+        font-size: 45px;
+
+      }
 `;
 
 const Break = styled.div`
@@ -99,6 +119,12 @@ const VerticalBreak = styled.div`
     height: 80px;
     margin-left: 10px;
     margin-top: 30px;
+
+    @media (max-width: 1440px) {
+        margin-top: 40px;
+        height: 70px;
+
+      }
 `;
 
 

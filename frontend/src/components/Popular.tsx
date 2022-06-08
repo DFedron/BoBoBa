@@ -8,9 +8,14 @@ const Section = styled.div`
   // position: absolute;
   width: 100%;
   height: 807px;
-  // left: 3px;
-  // top: 1686px;
-  // background: rgba(253, 150, 143, 0.2);
+
+
+  @media (max-width: 1440px) {
+
+
+    height: 650px;
+
+  }
 `;
 
 const Love = styled.div`    
@@ -20,6 +25,7 @@ const Love = styled.div`
     background attachment fixed;
     background-size:cover;
     margin: 10px
+
 `;
 
 const Title = styled.div`  
@@ -40,6 +46,13 @@ const Title = styled.div`
   letter-spacing: 0.06em;
 
   color: #F3683C;
+
+  @media (max-width: 1440px) {
+
+    width: 244px;
+    font-size: 50px;
+
+  }
 `;
 
 const LogoWrapper = styled.div`    
@@ -66,7 +79,13 @@ const Boba = styled.div`
     background-size:cover;
     // background-size: 60% 60%;
     background-position: center;
-    
+    @media (max-width: 1440px) {
+
+      width: 360px;
+      height: 450px;
+      font-size: 50px;
+  
+    }
 `;
 
 function Popular() {

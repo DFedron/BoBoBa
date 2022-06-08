@@ -26,6 +26,13 @@ const Button = styled.div`
     &:hover{
         color: rgba(253, 150, 143, 1);
     }
+
+    @media (max-width: 1440px) {
+      width: 130px;
+      margin-top: 20px;
+      font-size: 30px;
+
+    }
 `;
 
 export const LogoutButton: React.FC = () => {

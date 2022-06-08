@@ -10,7 +10,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Section = styled.section`
     background: url(${background}) no-repeat center center;
-    height: 904px;
+
+
     display: grid;
     background attachment fixed;
     background-size:cover;
@@ -18,7 +19,9 @@ const Section = styled.section`
     padding-top: 125px;
     width: 100%;
 
-
+    @media (max-width: 1440px) {
+        grid-template-rows: repeat(5, 125px);
+      }
 
 `;
 
@@ -38,6 +41,12 @@ const ContentOne = styled.div`
 
     letter-spacing: 0.1em;
     color: #FD968F;
+
+    @media (max-width: 1440px) {
+        font-size: 65px;
+
+      }
+
 `;
 
 
@@ -56,6 +65,13 @@ const ContentTwo = styled.div`
     letter-spacing: 0.1em;
 
     color: #F06C98;
+
+    @media (max-width: 1440px) {
+        font-size: 37px;
+        line-height: 65px;
+        margin-left: 10%;
+        margin-right: 10%
+      }
 `;
 const Button = styled.div`
     justify-content: center;
@@ -85,6 +101,12 @@ const Button = styled.div`
     &:hover{
         background-color: #fff;
     }
+
+    @media (max-width: 1440px) {
+        font-size: 45px;
+        line-height: 80px;
+
+      }
 `;
 
 const Hellopage = () => {

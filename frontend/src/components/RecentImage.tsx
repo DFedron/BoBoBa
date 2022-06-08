@@ -16,6 +16,13 @@ const Section = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr;
   // background: rgba(253, 150, 143, 0.2);
+
+  @media (max-width: 1440px) {
+
+
+    height: 650px;
+
+  }
 `;
 
 const SectionOne = styled.div`
@@ -42,6 +49,12 @@ const Title = styled.div`
   letter-spacing: 0.06em;
 
   color: #F3683C;
+  @media (max-width: 1440px) {
+    padding-top: 61px;
+    padding-left: 65px;
+    font-size: 50px;
+    width: 280px;
+  }
 
 `;
 
@@ -54,6 +67,12 @@ const Boba = styled.div`
     background-size:cover;
     // background-size: 60% 60%;
     background-position: center;
+    @media (max-width: 1440px) {
+
+      width: 320px;
+      height: 180px;
+  
+    }
     
 `;
 
@@ -66,7 +85,12 @@ const BobaOne = styled.div`
     background-size:cover;
     // background-size: 60% 60%;
     background-position: center;
-    
+    @media (max-width: 1440px) {
+
+      width: 140px;
+      height: 180px;
+  
+    }
 `;
 
 const RecentImage = () => {
